@@ -1,0 +1,52 @@
+<!DOCTYPE shtml>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="img/icon.jpeg">
+		<title>PizzalDellaMama | Benvenuto</title>
+	</head>
+	<body>
+		<h1>Pizza Della Mamma</h1>
+		<img src="img/banner2.png", alt="bannr" width=100% height=250px style="border-radius: 30px;">
+		<hr>
+		<table class="navbar">
+			<tr>
+				<td><button onclick="home()" class="navbar2", style="background:#252525;"><strong>BENVENUTO</strong></button></td>
+				<td><button onclick="menu()" class="navbar2"><strong>IL MENU</strong></button></td>
+				<td><button onclick="ordinare()" class="navbar2"><strong>ORDINARE</strong></button></td>
+				<td><button onclick="commenti()" class="navbar2"><strong>COMMENTI</strong></button></td>
+			</tr>
+		</table>
+		<hr>
+		<div>
+			<h2>Benvenuto</h2>
+			<p>Benvenuti nella nostra pizzeria familiare dal 1989<br>
+				Offriamo tutti i tipi di pizza tradizionale italiana<br>
+				Attenzione: Si prega di non ordinare pizza all'ananas sotto pena di morte
+			<br><br>
+			Tutto nel nostro restaurante ricorda l'Italia, 
+			che sia la decorazione con i suoi colori che la musica possiamo ascoltare: 
+			</p>
+			<audio src="img/italian-tarantella.mp3" controls loop class="center">
+				<embed name="Italian Tarentella" loop="true" hidden="false" src="img/italian-tarantella.mp3"></embed>
+			</audio>
+			<br><br>
+			<img src="img/boug.jpeg" alt="roger" width="59%" height="auto" class="center">
+		</div>
+	</body>
+</html>
+<script>
+	function home(){
+		location.replace("index.html")
+	}
+	function menu(){
+		location.replace("menu.html")
+	}
+	function ordinare(){
+		location.replace("ordinare.html")
+	}
+	function commenti(){
+		location.replace("commenti.html")
+	}
+</script>

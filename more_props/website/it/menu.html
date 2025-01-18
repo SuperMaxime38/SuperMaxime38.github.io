@@ -1,0 +1,45 @@
+<!DOCTYPE shtml>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="img/icon.jpeg">
+		<title>PizzalDellaMama | Il menu</title>
+	</head>
+	<body class="bg2">
+		<h1>Pizza Della Mamma</h1>
+		<img src="img/banner2.png", alt="bannr" width=100% height=250px style="border-radius: 30px;">
+		<hr>
+		<table class="navbar">
+			<tr>
+				<td><button onclick="home()" class="navbar2"><strong>BENVENUTO</strong></button></td>
+				<td><button onclick="menu()" class="navbar2", style="background:#252525;"><strong>IL MENU</strong></button></td>
+				<td><button onclick="ordinare()" class="navbar2"><strong>ORDINARE</strong></button></td>
+				<td><button onclick="commenti()" class="navbar2"><strong>COMMENTI</strong></button></td>
+			</tr>
+		</table>
+		<hr>
+		<div>
+			<h2>Il menu</h2>
+			<p>Trova qui i piatti che ti proponiamo<br>
+				Provengono tutti da fattorie circostanti 
+			</p>
+			<br><br>
+			<a href="img/menu.png"><img src="img/menu.png" alt="roger" width="auto" height="800"class="center" id="bright"></a>
+		</div>
+	</body>
+</html>
+<script>
+	function home(){
+		location.replace("index.html")
+	}
+	function menu(){
+		location.replace("menu.html")
+	}
+	function ordinare(){
+		location.replace("ordinare.html")
+	}
+	function commenti(){
+		location.replace("commenti.html")
+	}
+</script>

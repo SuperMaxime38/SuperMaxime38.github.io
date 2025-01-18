@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Paper Minecraft</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shorcut icon" href="icon.png">
+    </head>
+    <body class="bg">
+        <header>
+			<h1> JOUER </h1>
+			<nav>
+			<ul>
+				<li class="active"> <a href="index.html" class="menu" title="Jouer" id="glow"><strong>Jouer</strong></a> </li>
+				<li> <a href="news.html" class="menu" id="glow"><strong>Annonces</strong></a> </li>
+                <li> <a href="about.html" class="menu" id="glow"><strong>A propos</strong></a> </li>
+                <li> <a href="sources.html" class="menu" id="glow"><strong>Sources</strong></a> </li>
+			</ul>
+			</nav>
+		</header>
+        <br>
+        <h1>PLAY ● Paper Minecraft</h1>
+        <section>
+            <p>Scratch gère mal le plein écran, si vous souhaitez mettre les jeux scratch en plein écran, cliquez sur le bouton prévu à cet effet et cliquez sur le coin du jeu <a href="image/example.PNG" id="noaura" target="_blank">comme ceci</a></p>
+            <p><a href="https://scratch.mit.edu/projects/10128407/" target="_blank" class="gamepage"><b>Aller sur la page de paper minecraft</b></a></p>
+                <iframe src="https://scratch.mit.edu/projects/10128407/embed" width="1280" height="720" allowfullscreen id="game"></iframe>
+                <button onclick="fullScreen()"><strong>Plein ecran</strong><img src="image/fullscreen-icon-white.png" id="button-img"></button>
+            <article>
+                <h1 style="padding-top: 0px;"><a href="games.html">Voir tous les jeux</a></h1>
+            </article>
+        </section>
+    </body>
+    <script>
+        function fullScreen() {
+            let elem = document.querySelector("iframe");
+            if (!document.fullscreenElement) {
+             elem.requestFullscreen().catch((err) => {
+             alert(
+             `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
+             );
+            });
+            } else {
+            document.exitFullscreen();
+            }
+        }
+    </script>
+</html>
