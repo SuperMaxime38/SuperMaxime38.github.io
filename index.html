@@ -83,18 +83,24 @@
                     <table class="showcase">
                         <tr>
                             <td>
-                                <p>Image</p>
+                                <img src="props/video_to_ascii.png" width="600">
                             </td>
                             <td>
-                                <p>Texte</p>
+                                <p>Ci contre se trouve l'interface graphique de l'application, on peut charger une vidéo, qui s'affichera dans le lecteur à gauche.
+                                    Quand on appuie sur le bouton "Convert", la vidéo chargée est traitée et chacune de ses frame est affichée dans le "lecteur" à droite. Une barre de progression indique le nombre de frames traitées sur le nombre de frales totales.</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <p>Texte</p>
+                                <p>Chaque frame de la vidéo est d'abord redimensionnée, sa longueur est divisée par 8 et sa hauteur par 12 pour correpondre à la taille d'un caractère.
+                                    <br> On transforme ensuite cette frame en une image en niveaux de gris. On créer une nouvelle image blanche de la bonne taille.
+                                    Pour chaque pixel du niveau de gris, on choisit un caractère ASCII correspondant et on l'ajoute dans la nouvelle image.
+                                    <br>Les niveaux de gris vont de 0 à 255, j'ai choisit de mettre 8 caractères ascii: "$" , "#", "%", "=", "+", "_", "..", " ".
+                                    Pour le gris clair j'ai choisit le caractère ".", mais puisqu'il est plus petit qu'un autre caractère j'ai choisit d'en metrte 2 à la suite.
+                                </p>
                             </td>
                             <td>
-                                <p>Image</p>
+                                <video src="props/ascii_video.mp4" type="video/mp4" width="600" controls></video>
                             </td>
                         </tr>
                     </table>
@@ -247,7 +253,10 @@
                        Je l'ai fait avec Swing, la carte est une matrice en 2 dimensions contenant des entiers corresponsant aux différentes Tiles.
                        Le personnage pouvait bouger dans les 4 directions ainsi qu'en diagonale, il y avait des objets interactifs comme des coffres, portes, clés et bottes de vitesse.
                        Certains Tiles et objets avaient des collisions avec le joueur (eau, portes fermées) et il y avait une musique d'ambiance que j'ai composé sur internet.
+                       <br><br>
+                        Voici un aperçu de ce jeu:
                     </p>
+                    <video src="props/another_java_game.mp4" type="video/mp4" width="800" controls></video>
                 </td>
             </tr>
             
