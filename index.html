@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Portfolio | CARDOT-CLÉMENT Maxime</title>
+        <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Portfolio | CARDOT-CLÉMENT Maxime</h1>
+        <h1>Portfolio</h1>
         <nav id="navbar">
             <table class="navbar">
                 <tr class="navbar">
@@ -19,7 +19,7 @@
 
         <h2>Présentation</h2>
         <p class="presentation">
-            Je suis Maxime Cardot-Clément, je suis actuellement en terminale au lycée Ferdinand Buisson à Voiron. J'ai toujours été intéressé par l'informatique et la programmation
+            Je suis actuellement en terminale spécialité NSI et voici mon portfolio. J'ai toujours été intéressé par l'informatique et la programmation
             et j'ai donc choisi de me lancer dans ce domaine. J'ai donc logiquement choisi de prendre comme spécialité la NSI au lycée.
             J'ai une plutôt bonne maitrise des langages tels que Java et Python, j'ai déja eu à utiliser du C++, JavaScript, Unreal Engine... La plupart de mes réalisations ont été faites sur mon temps libre
             en extra-scolaire, je vais donc vous présenter mes projets les plus aboutis.
@@ -87,7 +87,7 @@
                             </td>
                             <td>
                                 <p>Ci contre se trouve l'interface graphique de l'application, on peut charger une vidéo, qui s'affichera dans le lecteur à gauche.
-                                    Quand on appuie sur le bouton "Convert", la vidéo chargée est traitée et chacune de ses frame est affichée dans le "lecteur" à droite. Une barre de progression indique le nombre de frames traitées sur le nombre de frales totales.</p>
+                                    Quand on appuie sur le bouton "Convert", la vidéo chargée est traitée et chacune de ses frame est affichée dans le "lecteur" à droite. Une barre de progression indique le nombre de frames traitées sur le nombre de frames totales.</p>
                             </td>
                         </tr>
                         <tr>
@@ -125,12 +125,14 @@
                                 <img src="props/yol_01.png" width="600">
                             </td>
                             <td>
-                                <p>Texte</p>
+                                <p>Vous trouverez ci-contre une capture d'écran du monde généré. Il est constitué d'une couche de bloc type "terre".</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <p>Texte</p>
+                                <p>Voici un extrait du code du shader ainsi que celui permettant de créer la projection matrix, qui permet de passer de la vue 2D au 3D.
+                                    Ce shader est le Vertex Shader, il permet de transformer chaque sommet du monde en un point 3D grace à un calcule matriciel. Ces informations sont transmises ensuite au fragment shader qui lui va décider quel couleur chaque pixel doit avoir.
+                                </p>
                             </td>
                             <td>
                                 <img src="props/shader_yol.png" width="600">
@@ -156,18 +158,25 @@
                     <table class="showcase">
                         <tr>
                             <td>
-                                <p>Image</p>
+                                <img src="props/narrator2.png" width="600">
+                                <img src="props/narrator1.png" width="600">
                             </td>
                             <td>
-                                <p>Texte</p>
+                                <p>Quand l'utilisateur exécute la commande /rp, tous ses messages seront considérés comme des prompts jusqu'à ce qu'il utilise la commande /hrp.
+                                    <br>Le message est transmit à une IA qui tourne avec NodeJS, pour indiquer à l'utilisateur que le modèle tourne il renvoie "Narrator is typing" puis quand le résultat sort, il est envoyé dans le salon.
+                                    <br>Pour démarrer une session de rôle play, il est nécessaire d'exécuter une commande /begin qui va envoyer un prompt définissant toutes les règles de narration à suive à l'IA.
+
+                                    <br><br>Les messages discord font au maximum 2000 caractères, si l'output de l'IA est supérieur, le message sera coupé à l'endroit où il y a un point, et à défaut, un espace.
+                                    <br><br>La température est l'hyperparamètre qui permet de modifier la "creativité" de l'IA. Pour éviter qu'elle se répète dans la narration, cette température est légèrement incrémentée à chaque message jusqu'à un certain palié.
+                                </p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <p>Texte</p>
+                                <p>On peut voir une discussion très simple entre un utilisateur et l'IA</p>
                             </td>
                             <td>
-                                <p>Image</p>
+                                <img src="props/narrator3.png" width="800">
                             </td>
                         </tr>
                     </table>
