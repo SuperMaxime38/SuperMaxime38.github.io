@@ -7,21 +7,98 @@
 	</head>
 	<body>
         <h1>Portfolio | Détails des projets</h1>
-		<h3>Sommaire</h3>
 		<nav>
 			<ul>
-				<li><a href="">Minecraft Tournoi des Légendes (Java)</a></li>
-				<li><a href="">HTMLInterpretor (Java)</a></li>
-				<li><a href="">Video To ASCII (C++)</a></li>
-				<li><a href="">Your Own Legend (Java)</a></li>
-				<li><a href="">Narrator (NodeJS)</a></li>
-				<li><a href="">SCREncoder (Java)</a></li>
-				<li><a href="">NSI - Youtoube (Python)</a></li>
-				<li><a href="">NSI - A Mazing Game (Python)</a></li>
-				<li><a href="">Another Java Game (Java)</a></li>
-				<li><a href="">IA (Python)</a></li>
+				<h3>Sommaire</h3>
+				<li><a href="index.html">Page d'accueil du portfolio</a></li>
+				<br>
+				<li><a href="#mctdl">Minecraft Tournoi des Légendes (Java)</a></li>
+				<li><a href="#html_interpretor">HTMLInterpretor (Java)</a></li>
+				<li><a href="#">Video To ASCII (C++)</a></li>
+				<li><a href="#">Your Own Legend (Java)</a></li>
+				<li><a href="#">Narrator (NodeJS)</a></li>
+				<li><a href="#">SCREncoder (Java)</a></li>
+				<li><a href="#">NSI - Youtoube (Python)</a></li>
+				<li><a href="#">NSI - A Mazing Game (Python)</a></li>
+				<li><a href="#">Another Java Game (Java)</a></li>
+				<li><a href="#">IA (Python)</a></li>
 			</ul>
 	</nav>
-		
+		<br><br><br>
+		<div id="mctdl" class="desc">
+			<hr>
+			<h2>Minecraft Tournoi des Légendes</h2>
+			<p>Ce projet est assez ambitieux dans le sens où il est nécessaire d'avoir de nombreux modes de jeu disponibles pour le considérer comme terminé.
+				<br> Le <strong>Meltdown</strong> est aujourd'hui le seul mode de jeu qui peut être considéré comme complètement terminé et c'est donc sur ce mode en particulier que cette présentation va détailler.
+				<br><br>
+				Les jeux ont été imaginés pour être joué à 8 équipes de 4 joueurs. Par leurs performances individuelles et collective, les joueurs gagnent des Coins. Ces Coins sont liés à leur profile et sert à avoir un classement personnel.
+				L'équipe rassemble la somme des Coins de chacun de ses membres, de cette façon on peut les classer.
+				<br> Le Meltdown est basé sur la coopération entre les joueurs d'une équipe. En effet, une équipe est éliminée seulement si tous ses joueurs sont congelés. De plus, la pioche servant à récupérer les blocs de Coins ne peuvent être utilisés que par un
+				joueur de l'équipe à la fois. Il est donc primordiale de s'organiser afin de pouvoir obtenir le plus d'or possible en éliminant les équipes adverse.
+				<br> Le meltdown est organisé en salles, qui s'ouvrent au fur et à mesure que le temps passe.
+			</p>
+			<img src="more_props/image/meltdown_map.png" width="800">
+			<p>
+				Les salles aux extrêmités sont les points d'apparition des équipes. Elles ont directement accès à la salle devant elles. Les salles d'ouvrent au fur et à mesure, se rapprochant du centre et permettant aux équipes de se rencontrer.
+				<br>Pour pousser les joueurs à se rendre au centre, les salles vont progressivement "fondre" à partir d'un certain temps de jeu, d'où le nom "Meltdown". Des alarmes s'activent dans ces salles 1 minute avant qu'elles ne commencent à fondre,
+				avec un signal sonore (le tout grace au pack de texture).
+			</p>
+			<table class="multi_images">
+				<tr>
+					<td>
+						<img src="more_props/image/meltdown_alarm.png" width="400">
+					</td>
+					<td>
+						<img src="more_props/image/meltdown_ground.png" height="400">
+					</td>
+				</tr>
+			</table>
+			<br>
+			<p>Quand un joueur ennemi touche un membre de l'équipe avec un <strong>Freezing Gun</strong>, celui ci se transforme en glace. Il est désormais en mode "spectateur", où il est forcé d'avir le point de vue d'un de ses coéquipier (La caméra libre est empêchée par le plugin).
+			Si un membre de son équipe place un <strong>Heater</strong>, il va progressivement décongeler jusqu'à être libéré, le joueur retrouve alors le contrôle de son personnage.
+			</p>
+			<table class="multi_images">
+				<tr>
+					<td>
+						<img src="more_props/image/meltdown_target.png" height="500">
+					</td>
+					<td>
+						<img src="more_props/image/meltdown_frozen.png" width="500">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="more_props/image/meltdown_spectatting.png" height="90">
+					</td>
+					<td>
+						<img src="more_props/image/meltdown_unfreezing.png" width="500">
+					</td>
+				</tr>
+			</table>
+			<p>(Note: les noms des joueurs sont censurés car ils contenaient mon prénom.)</p>
+			<br><br>
+			<p>
+				Quand il ne reste plus qu'une équipe les Coins gagnés durant la partie sont attribués et les joueurs téléportés au Lobby.
+			</p>
+			<table class="multi_images">
+				<tr>
+					<td>
+						<img src="more_props/image/meltdown_win.png" width="600">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="more_props/image/meltdown_lobby.png" width="600">
+					</td>
+				</tr>
+			</table>
+
+			
+		</div>
+		<div id="html_interpretor">
+			<hr>
+			<h2>HTML Interpreteur</h2>
+			
+		</div>
 	</body>
 </html>

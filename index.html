@@ -220,10 +220,36 @@
                 <td class="project">
                     <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">SCREncodeur</h3>
                     <p>
-                        J'ai développer un algorithme de chiffrement en Java. Sa difficulté de décodage vient de l'inhabitualité de l'algorithme. 
-                        
+                        J'ai développé un algorithme de chiffrement en Java. Sa difficulté de décodage vient de l'inhabitualité de l'algorithme.
+                        <br>On peut considérer que la clé de chiffrement est l'algorithme lui même.
                     </p>
-
+                    <table class="showcase">
+                        <tr>
+                            <td>
+                                <img src="props/screncoder_1.png" width="600">
+                                <img src="props/screncoder_2.png" width="600">
+                            </td>
+                            <td>
+                                <p>
+                                    Pour encoder un message on commence par transcrire le texte en nombre. Chaque caractère est associé à un nombre entre 100 et 999 (chaque caractère en fait donc 3).
+                                    <br> Ces nombres peuvent être mis à la suite car chaque nombre est de 3 chiffres, on peut donc facilement retrouver le message original.
+                                    <br> Ensuite on multiplie ce nombre par une graine, on l'additionne et on superpose plusieurs opérations dessus afin de rendre le message plus difficile à décoder.
+                                    <br>Cette graine n'est pas une clé, elle est elle même encodée au début du message et sert de randomizer.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    La graine est encodée via un algorithme assez simple et elle est ensuite ajoutée au début du message.
+                                    Pour décoder le message il suffit d'éffectuer chaque opérations sur le message dans l'ordre inverse.
+                                </p>
+                            </td>
+                            <td>
+                                <img src="props/screncoder_3.png" width="800">
+                            </td>
+                        </tr>
+                    </table>
 
                 </td>
             </tr>
@@ -235,8 +261,31 @@
                         Le projet d'interpreteur HTML en Java est interressant le niveau de difficulté est néanmoins élevé.
                         Dans la finalité de créer un navigateur internet j'ai donc décider de renoncer à développer moi même chaque élément pour à la place utiliser des outils déja existants.
                         Ce navigateur tourne donc avec <a href="https://openjfx.io/" target="_blank">JavaFX</a> qui a son propre interpreteur HTML, CSS, JavaScript via l'élément WebView.
+                        <br><br>Ce projet est dans les premières étapes de développement
                     </p>
-
+                    <table class="showcase">
+                        <tr>
+                            <td>
+                                <img src="props/javabrowser_1.png" width="600">
+                            </td>
+                            <td>
+                                <p>
+                                    Parmis les fonctionnalités actuelles, un bouton de création d'onglet, de fermeture d'onglet, un bouton "retour arrière" qui permet de revenir d'une page en arrière et un "retour avant" qui permet de revenir d'une page en avant.
+                                    Il y a une barre d'URL pour charger les sites, un bouton de téléchargement qui, pour l'instant ne fait rien mais affiche une barre de progression lors d'un téléchargement. Il y a finalement un bouton permettant d'afficher l'historique.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Il y a encore de nombreuses fonctionnalités à implémenter comme par exemple la prise en charge des cookies et des sessions ou encore le fait que pour le moment l'historique n'affiche que l'historique de l'onglet courant.
+                                </p>
+                            </td>
+                            <td>
+                                <img src="props/javabrowser_2.png" width="800">
+                            </td>
+                        </tr>
+                    </table>
                     
                     <p>Ce projet est en ligne sur github: <a href="https://github.com/SuperMaxime38/JavaBrowser" target="_blank">https://github.com/SuperMaxime38/JavaBrowser</a></p>
                 </td>
