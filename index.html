@@ -329,6 +329,7 @@
 
                     <hr>
                     <h3>NSI</h3>
+                    <h4>Youtoube</h4>
                     <p>
                         Plus récemment, en NSI, nous avons du faire un site internet à l'aide de <a href="https://flask.palletsprojects.com/en/stable/" target="_blank">Flask</a>.
                         <br>Nous avions pour contrainte d'utiliser du SQL dans notre site, notre groupe à donc fait une "copie" de Youtube.
@@ -338,7 +339,64 @@
                     
                     <br>
 
-                    <p>Ce projet étant assez conséquent, vous pouvez retrouver les détails dans la page <a href="about.html#nsi" target="_blank">Plus d'informations sur ce projet</a></p>
+                    <p>Ce projet étant assez conséquent, vous pouvez retrouver les détails dans la page <a href="about.html#youtoube" target="_blank">Plus d'informations sur ce projet</a></p>
+                    <br><br>
+                    <h4>A Mazing Game</h4>
+                    <p>
+                        Nous avions comme second projet de faire un générateur de labyrinthe et d'afficher le rendu avec <a href="https://www.pygame.org/" target="_blank">pygame</a>.
+                        <br>Pour rendre ce projet plus interessant moi et plusieurs autres membres de la classe avons décidé de transformer nos labyrinthes en véritables jeux.
+                        Nous devions tout d'abord générer un labyrinthe à l'aide d'un graphe dont nous faisions le parcours en profondeur en choisissant aléatoirement le voisin.
+                        Nous avons "creuser" ensuite des trous dans les murs (ajout d'arêtes) afin que le labyrinthe ne soit plus un labyrinthe parfait.
+                        <br>Mon projet contient pour l'instant 2 modes de jeu:
+                        <div class="multi_images">
+                            <ul>
+                                <li>Le mode normal: Le joueur doit trouver la sortie et est poursuivi par des monstres.</li>
+                                <li>Le mode hunter: Le joueur doit tuer tous les monstres dans un temps donné.</li>
+                            </ul>
+                        </div>
+                        
+                    </p>
+                    
+                    <table class="showcase">
+                        <tr>
+                            <td>
+                                <img src="props/a_mazing_game_home.png" width="600">
+                            </td>
+                            <td>
+                                <p>
+                                    Voici la page princiaple du jeu, , on peut y sélectionner le mode, la taille du labyrinthe ainsi que la difficulté.
+                                    Le nombre d'ennemi, leur vitesse, le nombre de cases creusées ainsi que le champ de vision du joueur varie en fonction de cette dernière.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    On peut voir un aperçu d'une partie qui vient de débuter ci contre. Le joueur apparait en bleu dans le coin supérieur gauche. La sortie, elle se trouve dans le coin inférieur droit.
+                                    <br>On voit clairement le champ de vision autour du joueur. Le deuxième cercle de couleur apparait autour d'une lampe, un objet permettant d'augmenter le champ de vision du joueur.
+                                    <br>En effet, en plus du joueur et des ennemis, ce jeu comporte des objets tels que les lampes, les pointes, de potions de soins et des leviers permettant la désactivation des pointes.
+                                </p>
+                            </td>
+                            <td>
+                                <img src="props/a_mazing_game_normal_start.png" width="800">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="props/a_mazing_game_emptygrid.png" width="800">
+                                <img src="props/a_mazing_game_mazebuild.png" width="800">
+                            </td>
+                            <td>
+                                Voici le code responsable de la création du labyrinthe.
+                                Dans un premier temps on créer un graphe "vide": on créer des arêtes avec chaque sommet voisin (build_empty_grid()).
+                                <br>Ensuite on fait le parcours en profondeur en choisissant aléatoirement le voisin du sommet courant (chosen = choice(voisins)).
+                                <br>On ajoute une arête entre le sommet choisit et le sommet courant.
+                                <br>À la fin du parcours en profondeur, on parcourt chaque sommet de la carte, et s'il s'agit d'un mur, on a une certaine probabilité de le "creuser" (if uniform(0,1) < value: ),
+                                dans ce cas, on prend le sommet correspondant dans le graphe et on ajoute des arêtes entre celui ci et ses voisins.
+                                <br>La carte est donc désormais générée.
+                            </td>
+                        </tr>
+                    </table>
                 </td>   
             </tr>
 
@@ -373,25 +431,6 @@
                         Ce modèle est développé en Python avec <a hgref="https://pytorch.org/" target="_blank">Pytorch</a>, il suit la même architecture que GPT-2 à la différence que mon modèle ne possedait pas "d'encodeur" (voir <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" target="_blank">Attention is all you need</a>). Malheureusement, je ne lui ai pas donné un jeu de données
                         suffisant et il lui manque des détails le rendant moins performant.
                     </p>
-
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <p>Image</p>
-                            </td>
-                            <td>
-                                <p>Texte</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Texte</p>
-                            </td>
-                            <td>
-                                <p>Image</p>
-                            </td>
-                        </tr>
-                    </table>
 
 
                     <a href="about.html#ai" target="_blank">Plus d'informations sur ce projet</a>

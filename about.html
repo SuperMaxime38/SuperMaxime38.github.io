@@ -13,15 +13,14 @@
 				<li><a href="index.html">Page d'accueil du portfolio</a></li>
 				<br>
 				<li><a href="#mctdl">Minecraft Tournoi des Légendes (Java)</a></li>
-				<li><a href="#html_interpretor">HTMLInterpretor (Java)</a></li>
-				<li><a href="#">Video To ASCII (C++)</a></li>
-				<li><a href="#">Your Own Legend (Java)</a></li>
-				<li><a href="#">Narrator (NodeJS)</a></li>
-				<li><a href="#">SCREncoder (Java)</a></li>
-				<li><a href="#">NSI - Youtoube (Python)</a></li>
-				<li><a href="#">NSI - A Mazing Game (Python)</a></li>
-				<li><a href="#">Another Java Game (Java)</a></li>
-				<li><a href="#">IA (Python)</a></li>
+				<li><a href="#interpretor">HTMLInterpretor (Java)</a></li>
+				<li><a href="#ascii">Video To ASCII (C++)</a></li>
+				<li><a href="#yol">Your Own Legend (Java)</a></li>
+				<li><a href="#narrator">Narrator (NodeJS)</a></li>
+				<!--<li><a href="#">SCREncoder (Java)</a></li> -->
+				<li><a href="#youtoube">NSI - Youtoube (Python)</a></li>
+				<li><a href="#a_mazing_game">NSI - A Mazing Game (Python)</a></li>
+				<!-- <li><a href="#">Another Java Game (Java)</a></li> -->
 			</ul>
 	</nav>
 		<br><br><br>
@@ -95,10 +94,78 @@
 
 			
 		</div>
-		<div id="html_interpretor">
+		<div id="interpretor">
 			<hr>
 			<h2>HTML Interpreteur</h2>
+			<p>Ce projet consiste à prendre du code HTML et à l'afficher, en respectant les balises et les propriétés CSS.
+				<br>La page HTML passe d'abord dans un Parser, qui la découpe en tokens. Il y a 8 tokens de HTML:
+				<div class="multi_images">
+					<ul>
+						<li><strong>OPENING_TAG</strong>: une balise ouvrante (<)</li>
+						<li><strong>CLOING_TAG</strong>: une balise fermante (</)</li>
+						<li><strong>CLOSE_TAG</strong>: fin d'une balise ouvrante (>)</li>
+						<li><strong>SELF_CLOSING_TAG</strong>: une balise auto-fermante</li>
+						<li><strong>TEXT</strong>: contenu des balises</li>
+						<li><strong>RAW_CONTENT</strong>: Contenu entre les balises script et style</li>
+						<li><strong>OPENING_TAG</strong>: une balise ouvrante</li>
+						<li><strong>EOF</strong>: fin du document</li>
+					</ul>
+				</div>
+				Voici un extrait du Lexer:
+			</p>
+			<table class="multi_images">
+				<tr>
+					<td>
+						<img src="more_props/image/html_interpretor_lexer.png" width="600">
+					</td>
+				</tr>
+			</table>
+			<p>
+				Le Parser va ensuite transformer ces tokens en un arbre de syntaxe abstraite. Ce dernier est ensuite interprété par le Renderer, qui va l'executer. Le resultat sera affiché sur la page.
+			</p>
 			
+			<table class="multi_images">
+				<tr>
+					<td>
+						<img src="more_props/image/html_interpretor_parser.png" width="600">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="ascii">
+			<hr>
+			<h2>Video To ASCII</h2>
+			<p>
+				
+			</p>
+		</div>
+		<div id="yol">
+			<hr>
+			<h2>Your Own Legend</h2>
+			<p>
+				
+			</p>
+		</div>
+		<div id="narrator">
+			<hr>
+			<h2>Narrator</h2>
+			<p>
+				
+			</p>
+		</div>
+		<div id="youtoube">
+			<hr>
+			<h2>Youtoube</h2>
+			<p>
+				
+			</p>
+		</div>
+		<div id="a_mazing_game">
+			<hr>
+			<h2>A Mazing Game</h2>
+			<p>
+				
+			</p>
 		</div>
 	</body>
 </html>

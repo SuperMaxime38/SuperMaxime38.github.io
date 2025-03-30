@@ -128,4 +128,5 @@ li a:hover {
 .multi_images {
     display: flex;
     justify-content: center;
+    text-align: left;
 }
