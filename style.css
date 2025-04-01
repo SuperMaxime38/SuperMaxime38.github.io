@@ -67,7 +67,14 @@ td.project {
     box-shadow: 0px 0px 20px black;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
+    #projects {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
     nav  {
         flex-direction: column;
     }
@@ -81,6 +88,12 @@ td.project:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1250px) {
+    .showcase {
+        flex-direction: column;
+    }
 }
 
 .presentation {
@@ -129,4 +142,20 @@ li a:hover {
     display: flex;
     justify-content: center;
     text-align: left;
+}
+
+.demo_img {
+    width: 600px;
+}
+
+@media screen and (max-width: 1250px) {
+    .demo_img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .demo_img {
+        width: 200px;
+    }
 }
