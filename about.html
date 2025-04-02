@@ -213,13 +213,113 @@
 				Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.
 				<br>Notre site est divisé en plusieurs pages: les pages d'accueil, tendances et recherche qui affiche une liste de vidéos,les pages liées à l'utilisateur, où il peut voir ses informations, ses vidéos, son historique
 				 et finalement la page d'affichage des vidéos qui permet de les lires, de les "aimer" et de poster un commentaire.
+				<br>
+				<h3>Les pages d'accueil / recherche</h3>
+				Ces pages énumèrent les vidéos de la base de données. La page principale liste toutes les vidéos sans logique particulière, la page "tendances" les trie en fonction de leur nombre de vues, et la page recherche les tries selon le titre ou le créateur.
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="props/youtoube.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/youtoube_search_1.png" class="demo_img2">
+						</td>
+						<td>
+							<img src="more_props/image/youtoube_search_2.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+
+				<br>
+				Voici ensuite les pages liées à l'utilisateur.
+				<br>Pour y accèder, comme pour accèder à beaucoup d'autres contenu il est nécessaiere de se connecter à son compte (pour accèder à l'espace utilisateur mais aussi pour aimer ou commenter une vidéo).
+				Quand un utilisateur essaie d'accèder à une page qui necessite la connexion à un compte alors qu'il n'est pas connecté, un popup de connexion apparait.
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/youtoube_login_popup.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				Dans certains cas (mot de passe incorrect, clic sur le bouton "aimer") l'utilisateur sera redirigé vers la page de connexion elle-même (en l'occurence http://127.0.0.1:5000/login). Une fois la connexion effectuée,
+				il sera redirigé sur la page où il se trouvait précédemment: s'il regardait la vidéo "Test" et qu'il tente de la commenter sans être connecté, après s'être connecté il sera redirigé vers cette même vidéo.
+				<br>
+				Les pages de profil sont accessibles depuis la barre de navigation ouvrable avec le bouton "
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="auto" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+				</svg>".
+				<br>Menu déroulant du profil:
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/youtoube_login.png" class="demo_img2">
+						</td>
+						<td>
+							<img src="more_props/image/youtoube_logged.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				Si l'utilisateur n'est pas connecté, cela affiche simplement "Se connecter", s'il est connecté, les différentes pages sont accessibles.
+				Page de profil:
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/youtoube_personnal_datas.png" class="demo_img2">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>Les vidéos postés par l'utilisateurs:</p>
+							<img src="more_props/image/youtoube_my_videos.png" class="demo_img2">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>L'historique de l'utilisateur (trié par date, le plus récent en haut):</p>
+							<img src="more_props/image/youtoube_history.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				Toutes les vidéos vues jusqu'à présent sont en réalité des boutons cliquables qui redirigent vers la page de la vidéo.
+				<br>La page de la vidéo est composé de la vidéo elle même et de ses informations comme le titre, le créateur, le nombre de vues, le nombre de 'likes'...
+				<br>Un formulaire permet d'envoyer des commentaires et un bouton permet d'afficher ceux ci.
+				<br>Sur le coté droit, la liste des autres vidéo est disponibles.
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/youtoube_watch.png" class="demo_img2">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="more_props/image/youtoube_comments.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+
+				<br>
+				Ce projet peut être considéré comme terminé. La partie visuel de ce projet n'était pas notée, on peut donc envisager d'améliorer son esthétique. On peut aussi envisager une amélioration sur le stockage des vidéos.
+				En effet, elles sont pour le moment stockées en qualité source, on peut envisager de les compresser pour limiter leur impact sur le stockage du serveur.
+				<br>On peut aussi imaginer des améliorations comme l'implémentation d'algorithme de recommendations pour les videos.
 			</p>
 		</div>
 		<div id="a_mazing_game" class="desc">
 			<hr>
 			<h2>A Mazing Game</h2>
 			<p>
-				
+				Il s'agit du deuxième projet, seul cette fois ci, de NSI.
+				<br>
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/a_mazing_game_readme.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
 			</p>
 		</div>
 	</body>
