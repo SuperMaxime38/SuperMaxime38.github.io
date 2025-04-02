@@ -36,7 +36,7 @@
 				joueur de l'équipe à la fois. Il est donc primordiale de s'organiser afin de pouvoir obtenir le plus d'or possible en éliminant les équipes adverse.
 				<br> Le meltdown est organisé en salles, qui s'ouvrent au fur et à mesure que le temps passe.
 			</p>
-			<img src="more_props/image/meltdown_map.png" width="800">
+			<img src="more_props/image/meltdown_map.png" class="demo_img2">
 			<p>
 				Les salles aux extrêmités sont les points d'apparition des équipes. Elles ont directement accès à la salle devant elles. Les salles d'ouvrent au fur et à mesure, se rapprochant du centre et permettant aux équipes de se rencontrer.
 				<br>Pour pousser les joueurs à se rendre au centre, les salles vont progressivement "fondre" à partir d'un certain temps de jeu, d'où le nom "Meltdown". Des alarmes s'activent dans ces salles 1 minute avant qu'elles ne commencent à fondre,
@@ -45,10 +45,10 @@
 			<table class="multi_images">
 				<tr>
 					<td>
-						<img src="more_props/image/meltdown_alarm.png" width="400">
+						<img src="more_props/image/meltdown_alarm.png" class="demo_img2">
 					</td>
 					<td>
-						<img src="more_props/image/meltdown_ground.png" height="400">
+						<img src="more_props/image/meltdown_ground.png" class="demo_img2">
 					</td>
 				</tr>
 			</table>
@@ -59,18 +59,18 @@
 			<table class="multi_images">
 				<tr>
 					<td>
-						<img src="more_props/image/meltdown_target.png" height="500">
+						<img src="more_props/image/meltdown_target.png" class="demo_img2">
 					</td>
 					<td>
-						<img src="more_props/image/meltdown_frozen.png" width="500">
+						<img src="more_props/image/meltdown_frozen.png" class="demo_img2">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<img src="more_props/image/meltdown_spectatting.png" height="90">
+						<img src="more_props/image/meltdown_spectatting.png" class="demo_img2">
 					</td>
 					<td>
-						<img src="more_props/image/meltdown_unfreezing.png" width="500">
+						<img src="more_props/image/meltdown_unfreezing.png" class="demo_img2">
 					</td>
 				</tr>
 			</table>
@@ -82,19 +82,19 @@
 			<table class="multi_images">
 				<tr>
 					<td>
-						<img src="more_props/image/meltdown_win.png" width="600">
+						<img src="more_props/image/meltdown_win.png" class="demo_img2">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<img src="more_props/image/meltdown_lobby.png" width="600">
+						<img src="more_props/image/meltdown_lobby.png" class="demo_img2">
 					</td>
 				</tr>
 			</table>
 
 			
 		</div>
-		<div id="interpretor">
+		<div id="interpretor" class="desc">
 			<hr>
 			<h2>HTML Interpreteur</h2>
 			<p>Ce projet consiste à prendre du code HTML et à l'afficher, en respectant les balises et les propriétés CSS.
@@ -116,7 +116,7 @@
 			<table class="multi_images">
 				<tr>
 					<td>
-						<img src="more_props/image/html_interpretor_lexer.png" width="600">
+						<img src="more_props/image/html_interpretor_lexer.png" class="demo_img2">
 					</td>
 				</tr>
 			</table>
@@ -127,40 +127,95 @@
 			<table class="multi_images">
 				<tr>
 					<td>
-						<img src="more_props/image/html_interpretor_parser.png" width="600">
+						<img src="more_props/image/html_interpretor_parser.png" class="demo_img2">
 					</td>
 				</tr>
 			</table>
 		</div>
-		<div id="ascii">
+		<div id="ascii" class="desc">
 			<hr>
 			<h2>Video To ASCII</h2>
 			<p>
 				
 			</p>
 		</div>
-		<div id="yol">
+		<div id="yol" class="desc">
 			<hr>
 			<h2>Your Own Legend</h2>
 			<p>
-				
+				Your Own Legend est mon premier essai de jeu en 3D. C'est un jeu de type Voxel, les cubes sont générés par "Chunk" de 16 blocs par 16 blocs.
+				<br>Le joueur est représenté par une caméra qui a une position et une rotattion. A chaque rafraichissement, cette position et rotation sont mises à jour.
+				Quand j'ai implémenté cette caméra mon taux de rafraichissement était cappé à 165Hz, la vitesse que j'ai choisi pour le joueur est donc adaptée à ce tauc de rafraichissement.
+				Or, ce taux de rafraichissement peut varier d'un ordinateur à l'autre et même ne pas être stable. La vitesse pourrait donc varier en fonction de la configuration de l'ordinateur.
+				Pour éviter cela, il suffit de définir la distance parcourue en 1 frame par <i>vitesse / taux de rafraichissement</i>.
+				<br> Voici un apreçu de la caméra:
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/yol_camera.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				Maintenant que nous avons une caméra il nous faut un monde.
+				<br>La <i>render distance</i> ou distance de rendu est la distance maximale auquel le joueur peut voir. Passé cette distance, le monde ne se génère plus.
+				Quand le joueur s'approche suffisamment d'un chunk pour le faire entrer dans la zone de rendu, un Thread vérifie si ce chunk a précédemment été initialisé, et, si non, le génère et le stock.
+				<br>Le Thread chargé du récupère tous les chunks générés qui se situent dans le rayon de la distance de rendu et les affiche.
+				L'affichage est géré par OpenGL, qui récupère les coordonnées des sommets du cube, sa texture et après la multiplication des coordonnées des sommets par la <i>view matrix, projection matrix et transformation matrix</i> affiche le résultat à l'écran.
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/yol_update_terrain.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				<i>Le generator créer une heightmap suivant l'algorithme du bruit de Perlin.</i>
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/yol_loop.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/yol_render.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				<i>
+					Une fois la position et la rotation de la caméra calculée, les chunks devant être affichés générés et chargés ils sont maintenant affichés.
+				</i>
+				<table class="multi_images">
+					
+					<tr>
+						<td>
+							<img src="more_props/image/yol_entity_renderer.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+
+				Ci après vous pouvez retrouver une démonstration du jeu dans son état actuel.
 			</p>
+			<video src="more_props/image/yol_demo.mp4" type="video/mp4" class="demo_img2" controls></video>
 		</div>
-		<div id="narrator">
+		<div id="narrator" class="desc">
 			<hr>
 			<h2>Narrator</h2>
 			<p>
 				
 			</p>
 		</div>
-		<div id="youtoube">
+		<div id="youtoube" class="desc">
 			<hr>
 			<h2>Youtoube</h2>
 			<p>
-				
+				Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.
+				<br>Notre site est divisé en plusieurs pages: les pages d'accueil, tendances et recherche qui affiche une liste de vidéos,les pages liées à l'utilisateur, où il peut voir ses informations, ses vidéos, son historique
+				 et finalement la page d'affichage des vidéos qui permet de les lires, de les "aimer" et de poster un commentaire.
 			</p>
 		</div>
-		<div id="a_mazing_game">
+		<div id="a_mazing_game" class="desc">
 			<hr>
 			<h2>A Mazing Game</h2>
 			<p>

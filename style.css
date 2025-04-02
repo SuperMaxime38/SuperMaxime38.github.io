@@ -71,12 +71,17 @@ td.project {
     #projects {
         flex-direction: column;
     }
-}
-
-
-@media screen and (max-width: 1250px) {
+    
     nav  {
         flex-direction: column;
+    }
+
+    .showcase tr td {
+        display: block;
+    }
+
+    .multi_images tr td {
+        display: block;
     }
 }
 
@@ -90,11 +95,6 @@ td.project:hover {
     align-items: center;
 }
 
-@media screen and (max-width: 1250px) {
-    .showcase {
-        flex-direction: column;
-    }
-}
 
 .presentation {
     width: 70%;
@@ -148,14 +148,30 @@ li a:hover {
     width: 600px;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1400px) {
     .demo_img {
         width: 400px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     .demo_img {
         width: 200px;
+    }
+}
+
+.demo_img2 {
+    width: 800px;
+}
+
+@media screen and (max-width: 1900px) {
+    .demo_img2 {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .demo_img2 {
+        width: 450px;
     }
 }
