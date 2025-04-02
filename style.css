@@ -144,6 +144,10 @@ li a:hover {
     text-align: left;
 }
 
+.multi_images ul {
+    backdrop-filter: none;
+}
+
 .demo_img {
     width: 600px;
 }

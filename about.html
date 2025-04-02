@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-        <h1>Portfolio | Détails des projets</h1>
+        <h1 id="top">Portfolio | Détails des projets</h1>
 		<nav>
 			<ul>
 				<h3>Sommaire</h3>
@@ -16,7 +16,6 @@
 				<li><a href="#interpretor">HTMLInterpretor (Java)</a></li>
 				<li><a href="#ascii">Video To ASCII (C++)</a></li>
 				<li><a href="#yol">Your Own Legend (Java)</a></li>
-				<li><a href="#narrator">Narrator (NodeJS)</a></li>
 				<!--<li><a href="#">SCREncoder (Java)</a></li> -->
 				<li><a href="#youtoube">NSI - Youtoube (Python)</a></li>
 				<li><a href="#a_mazing_game">NSI - A Mazing Game (Python)</a></li>
@@ -136,7 +135,29 @@
 			<hr>
 			<h2>Video To ASCII</h2>
 			<p>
-				
+				Ce projet est relativement simple, les difficultés principales que j'ai rencontré sont en rapport avec C++ que je n'utilise pas couramment, les libraires externes et le déploiment.
+				La conversion de vidéo en vidéo ascii est simple:
+				<br>On décrète qu'un pixel fait 8*12 pixels.
+				<br>On divise donc la resolution de la video par 8 et 12.
+				<br>On transforme l'image en niveau de gris et selon ce niveau on imprime un caractère sur une image blanche.
+				<br>Toutes ces images mises à la suite permettent de faire une video ascii.
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/video_to_ascii_convert.png" class="demo_img2">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="more_props/image/video_to_ascii_transform.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				Cette démarche présente un problème: il n'y a pas de son.
+				<br>Pour résoudre ce problème il faudrait utiliser une librairie comme FFMpeg.
+				<br>Je rencontre en ce moment un problème avec ce projet: le bouton de conversion ne fonctionne plus.
+				Si je devais refaire ce problème j'utiliserai Java car j'ai plus d'expérience avec ce langage même si cela risque de prendre plus de temps pour traiter une vidéo.
+				Je reprendrai sûrement ce projet un jour pour le passer sous Java, la libraire FFMpeg est disponible aussi dans ce langage.
 			</p>
 		</div>
 		<div id="yol" class="desc">
@@ -198,13 +219,6 @@
 				Ci après vous pouvez retrouver une démonstration du jeu dans son état actuel.
 			</p>
 			<video src="more_props/image/yol_demo.mp4" type="video/mp4" class="demo_img2" controls></video>
-		</div>
-		<div id="narrator" class="desc">
-			<hr>
-			<h2>Narrator</h2>
-			<p>
-				
-			</p>
 		</div>
 		<div id="youtoube" class="desc">
 			<hr>
@@ -320,7 +334,88 @@
 						</td>
 					</tr>
 				</table>
+				Voici quelques images du jeu:
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/a_mazing_game_1.png" class="demo_img2">
+						</td>
+						<td>
+							<p>
+								On peut voir le joueur ainsi que des ennemis rouges, noirs et une potion de soin.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="more_props/image/a_mazing_game_blood.png" class="demo_img2">
+						</td>
+						<td>
+							<p>
+								Quand le joueur touche un spike, la texture du spike change et une trainée de sang apparait. Il y a autant de taches de sang par case que le joueur a touché de spike.
+								<br>Pour diversifier les taches de sang, la taille, la position et la rotation de la texture varie aléatoirement.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="more_props/image/a_mazing_game_lamp.png" class="demo_img2">
+						</td>
+						<td>
+							<p>
+								Quand le joueur récupère la lampe, son champ de vision augmente pendant une durée déterminée qui varie selon la difficulté.
+								<br>Il y a une barre qui indique la durée restante la lampe.
+							</p>
+						</td>
+					</tr>
+				</table>
+				En cas de victoire ou de défaite, le filtre noir disparait, le chemin qu'a emprunté le joueur s'affiche et on peut voir l'emplacement des objets et ennemis:
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/a_mazing_game_won.png" class="demo_img2">
+						</td>
+						<td>
+							<img src="more_props/image/a_mazing_game_game_lost.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+				<br>
+				Comme vu plus haut, le comportement des ennemis rouge (mode normal) est assez complexe.
+				<br> Tout d'abord savoir si l'ennemi est situé sur une trainée de sang, s'il n'y a pas de trainée de sang sur la carte, il va se diriger directement sur le joueur.
+				S'il y a une trainée de sang et qu'il n'est pas dessus, il va se dirigée vers la case de la trainée la plus proche de lui.
+				S'il y a une trainée de sang et qu'il est dessus, si le joueur est lui aussi dessus, il va le suivre, sinon il se déplace aléatoirement. L'algorithme utilisé pour chercher le chemin le plus court est le A*.
+
+				<br><br>
+				Les ennemis noirs eux suivent simplement le chemin le plus court vers le joueur (A*).
+				<br><br>
+				Les ennemis jaunes du mode Hunter sont les ennemis au comportement les plus complexes.
+				<br>les ennemis jaunes doivent fuir le joueur. Voici l'approche que j'ai utilisé:
+				<br>En situation classique ('panic mode' désactivé), l'ennemi cherche d'abord le point le plus loin du joueur (parcourt en largeur mais on retient le dernier point traité).
+				Ensuite l'ennemi cherche le point le plus proche du joueur (A*).
+				Pour déterminer le chemin à prendre, un algorithme A* modifié est appliqué, il prend en compte le point visé (le plus loin du joueur) tout en essayant d'éviter les cases situées dans le chemin le plus court pour aller au joueur.
+
+				<table class="multi_images">
+					<tr>
+						<td>
+							<img src="more_props/image/a_amzing_game_yellow_move.png" class="demo_img2">
+							<img src="more_props/image/a_mazing_game_bfs.png" class="demo_img2">
+						</td>
+						<td>
+							<img src="more_props/image/a_amzing_game_flee.png" class="demo_img2">
+						</td>
+					</tr>
+				</table>
+
+				<br> Ce jeu complètait les objectifs du devoir, néanmoins il me reste un mode à implémenter pour le considérer comme fini.
 			</p>
 		</div>
+		<hr>
+		<p>
+			Merci d'avoir regardé cette présentation.
+		</p>
+		<a href="#top">Haut de page</a>
+		<br>
+		<a href="index.html">Page d'accueil du portfolio</a>
 	</body>
 </html>
