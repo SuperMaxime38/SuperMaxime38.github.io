@@ -1,181 +1,88 @@
-body {
-    text-align: center;
-    background: radial-gradient(#3e3e3e,#000000);
-    color:white;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(21, 120, 92);
-}
-
-a:hover {
-    color: rgb(106, 186, 163);
-}
-
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
     position: sticky;
     top: 0px;
-    padding: 10px 0px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid red;
+    background-color: rgb(255, 242, 233);
 }
 
-table.navbar {
-    backdrop-filter: blur(5px);
-}
-
-a.navLink{
-    color: rgb(213, 174, 18);
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    padding: 15px 15px 15px 15px;
-    margin: 5px 5px 5px 5px;
-    border: 2px solid white;
-}
-a.navLink:hover {
-    box-shadow: 0px 0px 4px white;
-    text-shadow: 0 0 2px rgb(255, 200, 0);
-    filter: brightness(1.75);
-}
-
-#projects {
-    width: 90%;
+nav div {
+    border: 1px solid red;
     display: flex;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-    border: 2px solid white;
-    padding-left: 10%;
-    padding-right: 10%;
-
-    border-collapse: separate;
-    border-spacing: 40px;
 }
 
-td.project {
-    
-    background-color: #393939;
-    border: 1px solid grey;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px black;
+nav div img {
+    width: 6em;
+    height: auto;
 }
 
-@media screen and (max-width: 1250px) {
-    #projects {
-        flex-direction: column;
-    }
-    
-    nav  {
-        flex-direction: column;
-    }
-
-    .showcase tr td {
-        display: block;
-    }
-
-    .multi_images tr td {
-        display: block;
-    }
+.profile {
+    flex-direction: column;
 }
 
-td.project:hover {
-    box-shadow: 0px 0px 20px white;
+.profile h1 {
+    margin: 0;
 }
-
-.showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .presentation {
-    width: 70%;
+    text-align: center;
+    border: 1px solid blue;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    /* add bg img */
+}
+
+.presentation p {
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
-.shinylogo:hover {
-    -webkit-filter: drop-shadow(0px 0px 3px #49cea2);
-    filter: drop-shadow(0px 0px 3px #49cea2);
+
+.nav_scolaire {
+    display: none;
 }
 
-.project p {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+.nav_extra_scolaire {
+    display: none;
 }
 
-embed {
-    border-radius: 10px;
-    width:75%;
-    height:650px;
-}
-
-.desc {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-ul {
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    border-radius: 30px;
-}
-
-li a {
-    color: rgb(220, 255, 243);
-    text-shadow: rgb(40, 75, 55) 1px 0 10px;
-}
-
-li a:hover {
-    filter: brightness(1.5);
-}
-
-.multi_images {
+main {
     display: flex;
-    justify-content: center;
-    text-align: left;
+    flex-direction: column;
 }
 
-.multi_images ul {
-    backdrop-filter: none;
+section {
+
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid green;
+
+    text-align: center;
 }
 
-.demo_img {
-    width: 600px;
+section article {
+    margin-bottom: 3em;
 }
 
-@media screen and (max-width: 1400px) {
-    .demo_img {
-        width: 400px;
-    }
+section article button {
+    display: flex;
+    border: 1px solid orange;
+    width: 95%;
 }
 
-@media screen and (max-width: 1100px) {
-    .demo_img {
-        width: 200px;
-    }
+section article button img {
+    width: 40em;
+    height: 25em;
 }
 
-.demo_img2 {
-    width: 800px;
+section article button div {
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-@media screen and (max-width: 1900px) {
-    .demo_img2 {
-        width: 600px;
-    }
-}
-
-@media screen and (max-width: 1220px) {
-    .demo_img2 {
-        width: 450px;
-    }
+section article button img,p{
+    border: 1px solid purple;
 }

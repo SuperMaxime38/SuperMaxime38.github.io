@@ -1,437 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <title>Portfolio | CARDOT-CLEMENT Maxime</title>
     </head>
     <body>
-        <h1>Portfolio</h1>
-        <nav id="navbar">
-            <table class="navbar">
-                <tr class="navbar">
-                    <a class="navLink" href="#">ACCUEIL</a>
-                    <a class="navLink" href="#projects">PROJETS EXTRA-SCOLAIRES</a>
-                    <a class="navLink" href="#scolaire">PROJETS SCOLAIRES</a>
-                </tr>
-            </table>
+        <nav>
+            <div> <!-- Tete et nom -->
+                <img src="assets/avatar_temp.png" alt="avatar">
+                <div class="profile">
+                    <h1>CARDOT-CLEMENT Maxime</h1>
+                    <h1>PORTFOLIO</h1>
+                </div>
+            </div>
+            <div> <!-- PROJETS SCOLAIRES -->
+                <a href="#"><h1>PROJETS SCOLAIRES</h1></a>
+            </div>
+            <div> <!-- EXTRASCOLAIRES -->
+                <a href="#"><h1>PROJETS EXTRA-SCOLAIRES</h1></a>
+            </div>
         </nav>
+        <article class="presentation">
+            <h2>Qui suis-je ?</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laboriosam est eius, nulla perspiciatis similique voluptates dolorem hic nam quibusdam totam rerum ratione quia repellat tenetur aut laudantium, ipsum optio?
+            </p>
+        </article>
+        <main>
+            <div class="nav_scolaire">
+                <h1>Projets scolaires</h1>
+                <form>
+                    <input type="text" placeholder="Rechercher..." name="search_scolaire">
+                    <input type="submit">
+                </form>
+                <ul>
+                    <li>
+                        <a href="index.html#prjs1">PROJECT TITLE</a>
+                    </li>
+                    <li>
+                        <a href="index.html#prjs2">PROJECT TITLE</a>
+                    </li>
+                    <li>
+                        <a href="index.html#projectA">PROJECT TITLE</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_extra_scolaire">
+                <h1>Projets extra-scolaires</h1>
+                <form>
+                    <input type="text" placeholder="Rechercher..." name="search_extra_scolaire">
+                    <input type="submit">
+                </form>
+                <ul>
+                    <li>
+                        <a href="index.html#prje1">PROJECT TITLE</a>
+                    </li>
+                    <li>
+                        <a href="index.html#projectA">PROJECT TITLE</a>
+                    </li>
+                    <li>
+                        <a href="index.html#projectA">PROJECT TITLE</a>
+                    </li>
+                </ul>
+            </div>
+            <section>
+                <h2>PROJETS SCOLAIRES</h2>
 
-        <h2>Présentation</h2>
-        <p class="presentation">
-            Je suis actuellement en terminale spécialité NSI et voici mon portfolio. J'ai toujours été intéressé par l'informatique et la programmation
-            et j'ai donc choisi de me lancer dans ce domaine. J'ai donc logiquement choisi de prendre comme spécialité la NSI au lycée.
-            J'ai une plutôt bonne maitrise des langages tels que Java et Python, j'ai déja eu à utiliser du C++, JavaScript, Unreal Engine... La plupart de mes réalisations ont été faites sur mon temps libre
-            en extra-scolaire, je vais donc vous présenter mes projets les plus aboutis.
-        </p>
-
-        <table id="projects">
-            <tr>
-                <td><h2>Mes projets Extra-scolaires</h2></td>
-            </tr>
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">MCTdL</h3>
-                    <p>J'ai commencé par apprendre le Java pour pouvoir modifier le jeu Minecraft. J'ai utilisé la librairie <a href="https://www.spigotmc.org/" target="_blank">Spigot</a> pour ajouter de nouveaux modes de jeu
-                    Ce plugin que j'ai créé est un plugin de tournoi. 8 équipes s'affrontent dans différentes épreuves et remportent dans chacune d'entres elles des points (Coins). 
-                    L'équipe qui à la fin du tournoi a le plus de Coins gagne.
-                    <br> Pour le moment, une seule épreuve est complètement terminée, il s'agit du Meltdown.
-                    <br> Le but est simple: des portions de la carte s'ouvrent petit à petit. Des blocs de 'Coins' se trouvent dans chaque salle. Casser ces blocs et éliminer les autres joueurs rapportent des Coins aux équipes.
-                    Quand il ne reste plus qu'une équipe, la partie se termine.
-                    <br><br>Ce jeu est accompagné d'un pack de textures fait entièrement par mes soins. Il contient des modèles 3D et des animations pour les différents blocs customisés.
-                    </p>
-
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/mctdl_heater.png" class="demo_img">
-                                <img src="props/mctdl_freezing_gun.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>Ci contre on peut retrouver 2 éléments clés du Meltdown, le <strong>Heater</strong> et le <strong>Freezing Gun</strong>.
-                                Le freezing gun permet de tirer sur les joueurs adverses. Si un joueur est touché il est congelé. Si tous les joueurs d'une équipe sont congelés, l'équipe est éliminée.
-                                <br> Le Heater permet de faire décongeler les joueurs alliés, quand il se fait détruire, il y a un temps de récupération avant qu'il ne puisse être utilisé de nouveau.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Les blocs de Coins donnent 80 Coins lors de leur destruction. Pour détruire ces blocs, il faut une 'Coin Pickaxe'.
-                                    Seul 1 joueur de l'équipe peut l'avoir à la fois et quand elle change de possesseur, il y a un délai avant qu'un autre joueur ne puisse l'utiliser.</p>
-                            </td>
-                            <td>
-                                <img src="props/mctdl_coins.png" class="demo_img">
-                            </td>
-                        </tr>
-                    </table>
-
-                    <p>Ce projet est en ligne sur github: <a href="https://github.com/SuperMaxime38/MCTdL" target="_blank">https://github.com/SuperMaxime38/MCTdL</a></p>
-                    <a href="about.html#mctdl" target="_blank">Plus d'informations sur ce projet</a>
-                </td>
-            </tr>
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">HTMLInterpretor</h3>
-                    <p>
-                        J'ai eu l'envie de créer mon propre navigateur internet en Java pure (Swing). Ce projet est assez long et j'ai commencé par développer un interpreteur HTML. Il contient donc un Lexer, Parser et Afficheur HTML ainsi qu'un Parser & Lexer CSS.
-                        À cause de la quantité d'éléments à prendre en compte, cet interpreteur ne supporte pour l'instant que quelques balises et propriétés CSS.
-                    </p>
-
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/image_html_interpeteur_01.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>On peut changer la couleur du texte (baslises p, h1, etc) et afficher des images,
-                                    <br>quelles soient hébergées sur le pc/serveur où via une url, les formats comme WebP sont supportés.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Voici une partie du code du Lexer qui permet de séparer le code HTML en tokens.</p>
-                            </td>
-                            <td>
-                                <img src="props/html_interpreteur_02.png" class="demo_img">
-                            </td>
-                        </tr>
-                    </table>
-
-
-                    <p>Ce projet est en ligne sur github: <a href="https://github.com/SuperMaxime38/HTMLInterpretor" target="_blank">https://github.com/SuperMaxime38/HTMLInterpretor</a></p>
-                    <a href="about.html#interpretor" target="_blank">Plus d'informations sur ce projet</a>
-                </td>
-            </tr>
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/cpp.png" class="shinylogo">Video To ASCII</h3>
-                    <p>
-                        Il m'était venu l'envie de faire un programme qui convertissait une image en caractères ASCII. J'ai fini par développer un programme qui convertit une vidéo classique en vidéo composée de caractères ASCII.
-                        Par un souci de vitesse, je l'ai fait en C++ avec .NET framework et <a href="https://opencv.org/" target="_blank">OpenCV</a> dans Visual Studio 2022.
-                    </p>
-
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/video_to_ascii.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>Ci contre se trouve l'interface graphique de l'application, on peut charger une vidéo, qui s'affichera dans le lecteur à gauche.
-                                    Quand on appuie sur le bouton "Convert", la vidéo chargée est traitée et chacune de ses frame est affichée dans le "lecteur" à droite. Une barre de progression indique le nombre de frames traitées sur le nombre de frames totales.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Chaque frame de la vidéo est d'abord redimensionnée, sa longueur est divisée par 8 et sa hauteur par 12 pour correpondre à la taille d'un caractère.
-                                    <br> On transforme ensuite cette frame en une image en niveaux de gris. On créer une nouvelle image blanche de la bonne taille.
-                                    Pour chaque pixel du niveau de gris, on choisit un caractère ASCII correspondant et on l'ajoute dans la nouvelle image.
-                                    <br>Les niveaux de gris vont de 0 à 255, j'ai choisit de mettre 8 caractères ascii: "$" , "#", "%", "=", "+", "_", "..", " ".
-                                    Pour le gris clair j'ai choisit le caractère ".", mais puisqu'il est plus petit qu'un autre caractère j'ai choisit d'en metrte 2 à la suite.
-                                </p>
-                            </td>
-                            <td>
-                                <video src="props/ascii_video.mp4" type="video/mp4" class="demo_img" controls></video>
-                            </td>
-                        </tr>
-                    </table>
-
-
-                    <a href="about.html#ascii" target="_blank">Plus d'informations sur ce projet</a>
-                </td>
-            </tr>
-            
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">Your Own Legend</h3>
-                    <p>
-                        Voici un de mes projets actuellement en cours de développement. Il s'agit d'un Voxel Engine, sur le même style que Minecraft. Je l'ai développé en Java à l'aide de <a href="https://www.lwjgl.org/" target="_blank">LWJGL</a>.
-                        Pour le moment, le jeu génère le monde "indéfiniment" avec un terrain généré à l'aide du bruit de Perlin. Le monde ne contient qu'un seul type de bloc, ce qui, à l'avenir changera.
-                        le joueur peut se déplacer dans le monde dans toutes les directions (Z,Q,S,D, SPACE, SHIFT, Mouse), j'ai rajouté une touche permettant de "courir". L'affichage est géré par OpenGL et donc par la carte graphique.
-                    </p>
-
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/yol_01.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>Vous trouverez ci-contre une capture d'écran du monde généré. Il est constitué d'une couche de bloc type "terre".</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Voici un extrait du code du shader ainsi que celui permettant de créer la projection matrix, qui permet de passer de la vue 2D au 3D.
-                                    Ce shader est le Vertex Shader, il permet de transformer chaque sommet du monde en un point 3D grace à un calcule matriciel. Ces informations sont transmises ensuite au fragment shader qui lui va décider quel couleur chaque pixel doit avoir.
-                                </p>
-                            </td>
-                            <td>
-                                <img src="props/shader_yol.png" class="demo_img">
-                                <img src="props/matrix_yol.png" class="demo_img">
-                            </td>
-                        </tr>
-                    </table>
-
-
-                    <p>Ce projet est en ligne sur github: <a href="https://github.com/SuperMaxime38/YourOwnLegend" target="_blank">https://github.com/SuperMaxime38/YourOwnLegend</a></p>
-                    <a href="about.html#yol" target="_blank">Plus d'informations sur ce projet</a>
-                </td>
-            </tr>
-            
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/js.png" class="shinylogo">Narrator</h3>
-                    <p>
-                        Avec mes amis, pour faire un jeu de rôle, j'avais eu l'idée de faire une IA qui serait capable de servir de narrateur.
-                        N'ayant aucune connaissances en IA, j'ai dans un premier temps téléchargé le modèle <a href="https://huggingface.co/TheBloke/Amethyst-13B-Mistral-GGUF" target="_blank">Amethyst-13B-Mistral</a>, que j'ai relié à un bot discord à l'aide de <a href="https://nodejs.org/en" target="_blank">NodeJS</a>.
-                    </p>
-
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/narrator2.png" class="demo_img">
-                                <img src="props/narrator1.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>Quand l'utilisateur exécute la commande /rp, tous ses messages seront considérés comme des prompts jusqu'à ce qu'il utilise la commande /hrp.
-                                    <br>Le message est transmit à une IA qui tourne avec NodeJS, pour indiquer à l'utilisateur que le modèle tourne il renvoie "Narrator is typing" puis quand le résultat sort, il est envoyé dans le salon.
-                                    <br>Pour démarrer une session de rôle play, il est nécessaire d'exécuter une commande /begin qui va envoyer un prompt définissant toutes les règles de narration à suive à l'IA.
-
-                                    <br><br>Les messages discord font au maximum 2000 caractères, si l'output de l'IA est supérieur, le message sera coupé à l'endroit où il y a un point, et à défaut, un espace.
-                                    <br><br>La température est l'hyperparamètre qui permet de modifier la "creativité" de l'IA. Pour éviter qu'elle se répète dans la narration, cette température est légèrement incrémentée à chaque message jusqu'à un certain palié.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>On peut voir une discussion très simple entre un utilisateur et l'IA</p>
-                            </td>
-                            <td>
-                                <img src="props/narrator3.png" class="demo_img">
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">SCREncodeur</h3>
-                    <p>
-                        J'ai développé un algorithme de chiffrement en Java. Sa difficulté de décodage vient de l'inhabitualité de l'algorithme.
-                        <br>On peut considérer que la clé de chiffrement est l'algorithme lui même.
-                    </p>
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/screncoder_1.png" class="demo_img">
-                                <img src="props/screncoder_2.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>
-                                    Pour encoder un message on commence par transcrire le texte en nombre. Chaque caractère est associé à un nombre entre 100 et 999 (chaque caractère en fait donc 3).
-                                    <br> Ces nombres peuvent être mis à la suite car chaque nombre est de 3 chiffres, on peut donc facilement retrouver le message original.
-                                    <br> Ensuite on multiplie ce nombre par une graine, on l'additionne et on superpose plusieurs opérations dessus afin de rendre le message plus difficile à décoder.
-                                    <br>Cette graine n'est pas une clé, elle est elle même encodée au début du message et sert de randomizer.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>
-                                    La graine est encodée via un algorithme assez simple et elle est ensuite ajoutée au début du message.
-                                    Pour décoder le message il suffit d'éffectuer chaque opérations sur le message dans l'ordre inverse.
-                                </p>
-                            </td>
-                            <td>
-                                <img src="props/screncoder_3.png" class="demo_img">
-                            </td>
-                        </tr>
-                    </table>
-
-                </td>
-            </tr>
-            
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">JavaBrowser</h3>
-                    <p>
-                        Le projet d'interpreteur HTML en Java est interressant le niveau de difficulté est néanmoins élevé.
-                        Dans la finalité de créer un navigateur internet j'ai donc décider de renoncer à développer moi même chaque élément pour à la place utiliser des outils déja existants.
-                        Ce navigateur tourne donc avec <a href="https://openjfx.io/" target="_blank">JavaFX</a> qui a son propre interpreteur HTML, CSS, JavaScript via l'élément WebView.
-                        <br><br>Ce projet est dans les premières étapes de développement
-                    </p>
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/javabrowser_1.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>
-                                    Parmis les fonctionnalités actuelles, un bouton de création d'onglet, de fermeture d'onglet, un bouton "retour arrière" qui permet de revenir d'une page en arrière et un "retour avant" qui permet de revenir d'une page en avant.
-                                    Il y a une barre d'URL pour charger les sites, un bouton de téléchargement qui, pour l'instant ne fait rien mais affiche une barre de progression lors d'un téléchargement. Il y a finalement un bouton permettant d'afficher l'historique.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>
-                                    Il y a encore de nombreuses fonctionnalités à implémenter comme par exemple la prise en charge des cookies et des sessions ou encore le fait que pour le moment l'historique n'affiche que l'historique de l'onglet courant.
-                                </p>
-                            </td>
-                            <td>
-                                <img src="props/javabrowser_2.png" class="demo_img">
-                            </td>
-                        </tr>
-                    </table>
-                    
-                    <p>Ce projet est en ligne sur github: <a href="https://github.com/SuperMaxime38/JavaBrowser" target="_blank">https://github.com/SuperMaxime38/JavaBrowser</a></p>
-                </td>
-            </tr>
-
-            <tr id="scolaire">
-                <td>
-                    <hr>
-                    <h2>Mes projets scolaires</h2>
-
-                    <h3>Sites internet</h3>
-                </td>
-            </tr>
-            
-            <tr class="project">
-                <td class="project">
-                    <h3>Italien</h3>
-                    <p>
-                        Lors des oraux d'italien on pouvait parfois s'appuyer sur des diaporamas. Dans ces situations je faisais donc de petites pages web afin d'ajouter de l'interactibilité à ma présentation.
-                    </p>
-                    <div>
-                        <embed type="text/html" src="more_props/website/it/index.html" width="100%" height="auto">
-                    </div>
-                    
-                    <br>
-
-                    <a href="more_props/website/it/index.html" target="_blank">Voir le site original</a>
-                    <hr>
-                    <h3>SNT</h3>
-                    <p>
-                        En seconde, avec l'option SNT, nous avions fait un chapitre sur le Web et sur le HTML, CSS, etc...
-                        <br> À la fin de ce chapitre nous devions faire une page web sur le thême de notre choix, j'ai donc fait un site sur le thème des jeux vidéos. Ce site intégrait plusieurs autres sites de jeux.
-                    </p>
-                    <div>
-                        <embed type="text/html" src="more_props/website/snt/index.html" width="100%" height="auto"> 
-                    </div>
-                    
-                    <br>
-
-                    <a href="more_props/website/snt/index.html" target="_blank">Voir le site original</a>
-
-                    <hr>
-                    <h3>NSI</h3>
-                    <h4>Youtoube</h4>
-                    <p>
-                        Plus récemment, en NSI, nous avons du faire un site internet à l'aide de <a href="https://flask.palletsprojects.com/en/stable/" target="_blank">Flask</a>.
-                        <br>Nous avions pour contrainte d'utiliser du SQL dans notre site, notre groupe à donc fait une "copie" de Youtube.
-                    </p>
-
-                    <img src="props/youtoube.png" width="60%">
-                    
-                    <br>
-
-                    <p>Ce projet étant assez conséquent, vous pouvez retrouver les détails dans la page <a href="about.html#youtoube" target="_blank">Plus d'informations sur ce projet</a></p>
-                    <br><br>
-                    <h4>A Mazing Game</h4>
-                    <p>
-                        Nous avions comme second projet de faire un générateur de labyrinthe et d'afficher le rendu avec <a href="https://www.pygame.org/" target="_blank">pygame</a>.
-                        <br>Pour rendre ce projet plus interessant moi et plusieurs autres membres de la classe avons décidé de transformer nos labyrinthes en véritables jeux.
-                        Nous devions tout d'abord générer un labyrinthe à l'aide d'un graphe dont nous faisions le parcours en profondeur en choisissant aléatoirement le voisin.
-                        Nous avons "creuser" ensuite des trous dans les murs (ajout d'arêtes) afin que le labyrinthe ne soit plus un labyrinthe parfait.
-                        <br>Mon projet contient pour l'instant 2 modes de jeu:
-                        <div class="multi_images">
-                            <ul>
-                                <li>Le mode normal: Le joueur doit trouver la sortie et est poursuivi par des monstres.</li>
-                                <li>Le mode hunter: Le joueur doit tuer tous les monstres dans un temps donné.</li>
-                            </ul>
+                <article id="prjs1">
+                    <h3>Youtoube</h3>
+                    <button>
+                        <img src="assets/avatar_temp.png" alt="image alt">
+                        <div>
+                            <p>En binome nous avons fait un clone de youtube avec Flask et une base de données SQL.Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.</p>
+                            <p>Notre site est divisé en plusieurs pages: les pages d'accueil, tendances et recherche qui affiche une liste de vidéos,les pages liées à l'utilisateur, où il peut voir ses informations, ses vidéos, son historique et finalement la page d'affichage des vidéos qui permet de les lires, de les "aimer" et de poster un commentaire. </p>
                         </div>
-                        
-                    </p>
-                    
-                    <table class="showcase">
-                        <tr>
-                            <td>
-                                <img src="props/a_mazing_game_home.png" class="demo_img">
-                            </td>
-                            <td>
-                                <p>
-                                    Voici la page princiaple du jeu, on peut y sélectionner le mode, la taille du labyrinthe ainsi que la difficulté.
-                                    Le nombre d'ennemi, leur vitesse, le nombre de cases creusées ainsi que le champ de vision du joueur varie en fonction de cette dernière.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>
-                                    On peut voir un aperçu d'une partie qui vient de débuter ci contre. Le joueur apparait en bleu dans le coin supérieur gauche. La sortie, elle se trouve dans le coin inférieur droit.
-                                    <br>On voit clairement le champ de vision autour du joueur. Le deuxième cercle de couleur apparait autour d'une lampe, un objet permettant d'augmenter le champ de vision du joueur.
-                                    <br>En effet, en plus du joueur et des ennemis, ce jeu comporte des objets tels que les lampes, les pointes, de potions de soins et des leviers permettant la désactivation des pointes.
-                                </p>
-                            </td>
-                            <td>
-                                <img src="props/a_mazing_game_normal_start.png" class="demo_img">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="props/a_mazing_game_emptygrid.png" class="demo_img">
-                                <img src="props/a_mazing_game_mazebuild.png" class="demo_img">
-                            </td>
-                            <td>
-                                Voici le code responsable de la création du labyrinthe.
-                                Dans un premier temps on créer un graphe "vide": on créer des arêtes avec chaque sommet voisin (build_empty_grid()).
-                                <br>Ensuite on fait le parcours en profondeur en choisissant aléatoirement le voisin du sommet courant (chosen = choice(voisins)).
-                                <br>On ajoute une arête entre le sommet choisit et le sommet courant.
-                                <br>À la fin du parcours en profondeur, on parcourt chaque sommet de la carte, et s'il s'agit d'un mur, on a une certaine probabilité de le "creuser" (if uniform(0,1) < value: ),
-                                dans ce cas, on prend le sommet correspondant dans le graphe et on ajoute des arêtes entre celui ci et ses voisins.
-                                <br>La carte est donc désormais générée.
-                            </td>
-                        </tr>
-                    </table>
-                    <a href="about.html#a_mazing_game" target="_blank">Plus d'informations sur ce projet</a></p>
-                </td>   
-            </tr>
+                    </button>
+                </article>
 
+                <article id="prjs1">
+                    <h3>A-Mazing-Game</h3>
+                    <button>
+                        <img src="" alt="image alt">
+                        <p>Autre Desc</p>
+                    </button>
+                </article>
+            </section>
+            <section>
+                <h2>PROJETS EXTRA-SCOLAIRES</h2>
 
-            <!--Lost projects-->
-            <tr>
-                <td>
-                    <h2>Certains de mes projets n'existait que sur mon disque dur qui s'est cassé. Ces projets sont mentionnés plus bas avec les quelques détails qu'il me reste.</h4>
-                </td>
-            </tr>
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle" src="props/java.webp" class="shinylogo">Jeu 2D Java</h3>
-                    <p>
-                       Je me suis intéressé à la création de jeu vidéo et j'ai développé une ébauche de jeu 2D en Java.
-                       Je l'ai fait avec Swing, la carte est une matrice en 2 dimensions contenant des entiers corresponsant aux différentes Tiles.
-                       Le personnage pouvait bouger dans les 4 directions ainsi qu'en diagonale, il y avait des objets interactifs comme des coffres, portes, clés et bottes de vitesse.
-                       Certains Tiles et objets avaient des collisions avec le joueur (eau, portes fermées) et il y avait une musique d'ambiance que j'ai composé sur internet.
-                       <br><br>
-                        Voici un aperçu de ce jeu:
-                    </p>
-                    <video src="props/another_java_game.mp4" type="video/mp4" class="demo_img" controls></video>
-                </td>
-            </tr>
-            
-            <tr class="project">
-                <td class="project">
-                    <h3><img width="40px" style="vertical-align:middle; margin-right: 5px;" src="props/python.png" class="shinylogo">IA</h3>
-                    <p>
-                        Le problème de mon bot discord précédent est l'utilisation d'un modèle d'IA assez lourd. Puisqu'il tournait en local sur mon ordinateur, il y avait un certain délai
-                        entre chaque interaction. Pour palier à cela, j'ai eu l'idée de créer moi même un modèle bien plus léger avec ses données d'entraînement basées sur l'histoire qu'il devait raconter.
-                        Ce modèle est développé en Python avec <a hgref="https://pytorch.org/" target="_blank">Pytorch</a>, il suit la même architecture que GPT-2 à la différence que mon modèle ne possedait pas "d'encodeur" (voir <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" target="_blank">Attention is all you need</a>). Malheureusement, je ne lui ai pas donné un jeu de données
-                        suffisant et il lui manque des détails le rendant moins performant.
-                    </p>
-                </td>
-            </tr>
-        </table>
-        <p>Vous venez de voir un aperçu de mes projets, si vous souhaitez voir plus de détails sur un ou plusieurs d'entre eux vous pouvez visiter ce lien: <a href="about.html" target="_blank">Détails des projets</a></p>
+                <article id="prje1">
+                    <h3>MCTdL</h3>
+                    <button>
+                        <img src="" alt="image alt">
+                        <p>Desc</p>
+                    </button>
+                </article>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
     </body>
 </html>
