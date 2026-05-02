@@ -32,7 +32,7 @@
 
                 <article id="chat_btp">
                     <h3>Chat BTP</h3>
-                    <button>
+                    <button onclick="display('chat_btp_desc')">
                         <img src="assets/chat_btp.png" alt="image alt">
                         <div>
                             <ul>
@@ -43,6 +43,11 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="chat_btp_desc" class="project_description" onclick="hide('chat_btp_desc')">
+                        <div id="desc_child">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi quidem optio reprehenderit corporis ad ut molestiae dolor nemo omnis! Voluptatem vitae laboriosam repudiandae inventore unde repellendus, temporibus minima ea.</p>
+                        </div>
+                    </div>
                 </article>
                 <article id="une_autre_sae">
                     <h3>Une autre SAE</h3>
@@ -99,7 +104,7 @@
                             <ul>
                                 <li>Technologies: Java, LibGDX</li>
                                 <li>Groupe: seul</li>
-                                <li>Durée: en cours</li>
+                                <li>Durée: projet en cours de développement</li>
                                 <li>Savoir-faire mobilisés: autonome, autodidacte...</li>
                             </ul>
                         </div>
@@ -140,5 +145,6 @@
         <footer>
 
         </footer>
+        <script src="helper.js"></script>
     </body>
 </html>

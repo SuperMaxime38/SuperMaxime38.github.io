@@ -10,16 +10,27 @@ body {
 nav {
     display: flex;
     position: sticky;
-    justify-content: space-between;
     top: 8px;
     border: 1px solid black;
     background-color: var(--nav-bg);
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav div {
     border: 1px solid black;
     display: flex;
+    flex: 1;
+    text-align: center;
 }
+
+nav div a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 nav div img {
     width: 6em;
@@ -65,12 +76,14 @@ section {
 
 section article {
     margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section article button {
     display: flex;
     /*border: 1px solid orange;*/
-    width: 95%;
+    width: 100%;
 }
 
 section article button img {
@@ -82,6 +95,27 @@ section article button div {
     width: 80%;
     height: 80px;
     text-align: left;
+}
+
+.project_description {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.project_description div {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 1px solid black;
+    overflow: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
 }
 
 @media screen and (max-width: 720px){
