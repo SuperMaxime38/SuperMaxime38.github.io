@@ -1,0 +1,14 @@
+<p>En binome nous avons fait un clone de youtube avec Flask et une base de données SQL. Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.</p>
+<p>Notre site est divisé en plusieurs pages: les pages d'accueil, tendances et recherche qui affiche une liste de vidéos,les pages liées à l'utilisateur, où il peut voir ses informations, ses vidéos, son historique et finalement la page d'affichage des vidéos qui permet de les lires, de les "aimer" et de poster un commentaire. </p>
+<br>
+<p>Ce projet a nécessité d'être structuré et de pouvoir travailler en équipe. Nous avons appris à utiliser un nouvel outil: Flask.</p>
+
+<p>Pour travailler avec des graphes j'ai créé un générateur de labyrinthes en python. J'ai du utiliser Pygame pour l'affichage et j'en ai profité pour transformer ce projet en véritable jeu vidéo.</p>
+<p>Le joueur peut se déplacer dans le labyrinthe et doit trouver la sortie en fuyant les monstres qui le pourchassent et en évitant les pièges sur son chemin.</p>
+<br>
+<p>Ce projet m'a permis de mettre en application les connaissances acquises en cours, j'ai dû être autonome, polyvalent et créatif.</p><
+
+<p>Nous avons développé un chatbot en Java en binome. Ce chatbot devait être spécialisé dans un certain domaine, nous l'avons spécialisé dans le BTP, d'où son nom. Nous lui avons ajouter une interface graphique.</p>
+<p>L'utilisateur peut poser des questions au chatbot, si celui-ci ne connait pas la réponse, l'utilisateur peut lui apprendre.</p>
+<br>
+<p>Ce projet m'a permis de mettre en application les connaissances apprises en classe.</p>

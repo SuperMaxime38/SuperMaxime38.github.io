@@ -1,13 +1,23 @@
+:root {
+    --nav-bg: rgb(252, 255, 255);
+    --bg: rgb(255, 255, 255);
+}
+
+body {
+    background-color: var(--bg);
+}
+
 nav {
     display: flex;
     position: sticky;
-    top: 0px;
-    border: 1px solid red;
-    background-color: rgb(255, 242, 233);
+    justify-content: space-between;
+    top: 8px;
+    border: 1px solid black;
+    background-color: var(--nav-bg);
 }
 
 nav div {
-    border: 1px solid red;
+    border: 1px solid black;
     display: flex;
 }
 
@@ -26,10 +36,9 @@ nav div img {
 
 .presentation {
     text-align: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue;*/
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     /* add bg img */
 }
 
@@ -37,14 +46,6 @@ nav div img {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.nav_scolaire {
-    display: none;
-}
-
-.nav_extra_scolaire {
-    display: none;
 }
 
 main {
@@ -57,7 +58,7 @@ section {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     text-align: center;
 }
@@ -68,7 +69,7 @@ section article {
 
 section article button {
     display: flex;
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     width: 95%;
 }
 
@@ -79,10 +80,12 @@ section article button img {
 
 section article button div {
     width: 80%;
-    margin-left: 5%;
-    margin-right: 5%;
+    height: 80px;
+    text-align: left;
 }
 
-section article button img,p{
-    border: 1px solid purple;
+@media screen and (max-width: 720px){
+    section article button {
+        flex-direction: column;
+    }
 }
