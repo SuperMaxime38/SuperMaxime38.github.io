@@ -106,8 +106,9 @@ section article button div {
     height: 100%;
 }
 
-.project_description div {
+#desc_child {
     width: 80%;
+    height: 80%;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -115,7 +116,13 @@ section article button div {
     overflow: auto;
     position: relative;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+}
+
+#desc_child div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
 }
 
 @media screen and (max-width: 720px){
