@@ -25,11 +25,14 @@
             <article class="presentation">
                 <p>
                     Je suis un développeur full stack...
+                    + mini presentation
+                    + contact
                 </p>
             </article>
             <section>
+                <hr>
                 <h2 id="scolaire">PROJETS ACADÉMIQUES</h2>
-
+                <hr>
                 <article id="chat_btp">
                     <h3>Chat BTP</h3>
                     <button onclick="display('chat_btp_desc')">
@@ -43,23 +46,28 @@
                             </ul>
                         </div>
                     </button>
-                    <div id="chat_btp_desc" class="project_description" onclick="hide('chat_btp_desc')">
+                    
+                    <div id="chat_btp_desc" class="project_description" onclick="hide()">
                         <div id="desc_child">
                             <h3>Chat BTP</h3>
                             <p>Nous avons développé un chatbot en Java en binome. Ce chatbot devait être spécialisé dans un certain domaine, nous l'avons spécialisé dans le BTP, d'où son nom. Nous lui avons ajouté une interface graphique.</p>
                             <p>L'utilisateur peut poser des questions au chatbot, si celui-ci ne connait pas la réponse, l'utilisateur peut la lui apprendre.</p>
                             <div>
-                                <img src="assets/avatar_temp.png">
-                                <img src="assets/avatar_temp.png">
-                                <img src="assets/avatar_temp.png">
-                                <img src="assets/avatar_temp.png">
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
                             </div>
                         </div>
                     </div>
                 </article>
                 <article id="une_autre_sae">
                     <h3>Une autre SAE</h3>
-                    <button>
+                    <button onclick="display('une_autre_sae')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -70,10 +78,27 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="une_autre_sae" class="project_description" onclick="hide('une_autre_sae')">
+                        <div id="desc_child">
+                            <h3>Chat BTP</h3>
+                            <p>Nous avons développé un chatbot en Java en binome. Ce chatbot devait être spécialisé dans un certain domaine, nous l'avons spécialisé dans le BTP, d'où son nom. Nous lui avons ajouté une interface graphique.</p>
+                            <p>L'utilisateur peut poser des questions au chatbot, si celui-ci ne connait pas la réponse, l'utilisateur peut la lui apprendre.</p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </article>
                 <article id="youtoube">
                     <h3>Youtoube</h3>
-                    <button>
+                    <button onclick="display('youtoube_desc')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -84,11 +109,28 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="youtoube_desc" class="project_description" onclick="hide('youtoube_desc')">
+                        <div id="desc_child">
+                            <h3>Youtoube</h3>
+                            <p>En binome nous avons fait un clone de youtube avec Flask et une base de données SQL. Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.</p>
+                            <p>Notre site est divisé en plusieurs pages: les pages d'accueil, tendances et recherche qui affiche une liste de vidéos,les pages liées à l'utilisateur, où il peut voir ses informations, ses vidéos, son historique et finalement la page d'affichage des vidéos qui permet de les lires, de les "aimer" et de poster un commentaire.</p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article id="a_mazing_game">
                     <h3>A-Mazing-Game</h3>
-                    <button>
+                    <button onclick="display('a_mazing_game_desc')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -99,14 +141,34 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="a_mazing_game_desc" class="project_description" onclick="hide('a_mazing_game_desc')">
+                        <div id="desc_child">
+                            <h3>A Mazing Game</h3>
+                            <p></p>
+                            <p></p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
             <section>
+
+                <hr>
                 <h2 id="personnel">PROJETS PERSONNELS</h2>
+                <hr>
 
                 <article id="bloodpit">
                     <h3>Blood Pit</h3>
-                    <button>
+                    <button onclick="display('bloodpit_desc')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -117,11 +179,28 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="bloodpit_desc" class="project_description" onclick="hide('bloodpit_desc')">
+                        <div id="desc_child">
+                            <h3>BloodPit</h3>
+                            <p></p>
+                            <p></p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article id="video_to_ascii">
                     <h3>Video To ASCII</h3>
-                    <button>
+                    <button onclick="display('video_to_ascii_desc')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -132,11 +211,28 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="video_to_ascii_desc" class="project_description" onclick="hide('video_to_ascii_desc')">
+                        <div id="desc_child">
+                            <h3>Video To Ascii</h3>
+                            <p></p>
+                            <p></p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article id="mctdl">
                     <h3>MCTdL</h3>
-                    <button>
+                    <button onclick="display('mctdl')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -147,6 +243,23 @@
                             </ul>
                         </div>
                     </button>
+                    <div id="chat_btp_desc" class="project_description" onclick="hide('chat_btp_desc')">
+                        <div id="desc_child">
+                            <h3>MCTdL</h3>
+                            <p></p>
+                            <p></p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <p>Desc</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
         </main>
