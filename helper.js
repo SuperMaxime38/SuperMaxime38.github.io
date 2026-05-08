@@ -40,8 +40,7 @@ function display(toDisplay) {
     }
     // Set the height of the popup to 800px
     document.getElementById(toDisplay).style.height = "100%";
-    // Display the navigation bar
-    document.getElementById(toDisplay).style.display = "block";
+    document.getElementById(toDisplay).style.display = "flex";
     isDescOpen = true;
     opened = toDisplay;
 
@@ -52,7 +51,6 @@ function hide() {
     if(!desc_child_clicked){
         // Set the height of the popup to 0
         document.getElementById(opened).style.height = "0";
-        // Hide the navigation bar
         document.getElementById(opened).style.display = "none";
         isDescOpen = false;
         opened = "";

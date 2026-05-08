@@ -34,7 +34,7 @@ nav div a {
 
 
 nav div img {
-    width: 6em;
+    width: 6rem;
     height: auto;
 }
 
@@ -80,7 +80,7 @@ section {
 }
 
 section article {
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -95,8 +95,8 @@ section article button {
 }
 
 section article button img {
-    width: 40em;
-    height: 25em;
+    width: 30rem;
+    height: auto;
 }
 
 section article button div {
@@ -106,31 +106,40 @@ section article button div {
 }
 
 .project_description {
-    display: none;
-    
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Reste fixe par rapport à la fenêtre (viewport) */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sremi-transparent pour faire ressortir le popup */
+    z-index: 1000; /* S'assure que le popup est au-dessus de tout */
+    
+    /* Centrage parfait avec Flexbox */
+    display: none; /* On garde none, le JS passera en flex */
+    justify-content: center;
+    align-items: center;
 }
+
 #desc_child {
     width: 80%;
-    height: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 80vh; /* Évite que le popup ne dépasse de l'écran en hauteur */
     background-color: white;
     border: 1px solid black;
-    overflow: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 5%;
+    overflow-y: auto; /* Permet de scroller à l'intérieur du popup si le texte est long */
+    padding: 20px;
+    border-radius: 10px;
+    /* Plus besoin de top: 50% ou transform ici grâce au Flexbox du parent */
 }
 
 #desc_child article {
     display: flex;
     gap: 20px;
+}
+
+#desc_child img {
+    width: 30rem;
+    height: auto;
 }
 
 #chat_btp button {
