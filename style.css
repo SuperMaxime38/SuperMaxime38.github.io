@@ -18,6 +18,10 @@ nav {
     margin-right: auto;
 }
 
+nav h1 {
+    font-size: clamp(1.5rem, 1.5vw + 0.1rem, 4rem);
+}
+
 nav div {
     border: 1px solid black;
     display: flex;
@@ -34,7 +38,7 @@ nav div a {
 
 
 nav div img {
-    width: 6rem;
+    width: 5vw;
     height: auto;
 }
 
@@ -95,8 +99,8 @@ section article button {
 }
 
 section article button img {
-    width: 30rem;
-    height: auto;
+    width: auto;
+    height: 20vw;
 }
 
 section article button div {
@@ -138,8 +142,23 @@ section article button div {
 }
 
 #desc_child img {
-    width: 30rem;
+    width: 25vw;
     height: auto;
+}
+#desc_child video {
+    width: 32vw;
+    height: 16vw;
+}
+
+#desc_child iframe {
+    width: 32vw;
+    height: 16vw;
+}
+
+#desc_child article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #chat_btp button {
@@ -165,8 +184,18 @@ section article button div {
 }
 
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 1120px){
     section article button {
         flex-direction: column;
+    }
+
+    section article button img {
+    width: 40vh;
+    height: auto;
+    }
+
+    
+    section article button div {
+        width: 100%;
     }
 }
