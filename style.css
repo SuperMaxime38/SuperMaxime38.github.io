@@ -1,5 +1,6 @@
 :root {
-    --nav-bg: rgb(235, 235, 235);
+    --nav-bg: rgb(240, 240, 240);
+    --nav-bg-hover: rgb(255, 255, 255);
     --bg: rgb(238, 245, 247);
     --grad1: #95f4ff;
     --gradMiddle: #ffffea;
@@ -40,6 +41,12 @@ nav div {
 nav div a {
     margin: auto;
     color: black;
+    padding: 25px;
+}
+
+nav div a:hover {
+    transition: all 0.4s ease-in-out;
+    background-color: var(--nav-bg-hover);
 }
 
 #avatar {
@@ -74,12 +81,6 @@ li {
 }
 p {
     font-size: clamp(0.95rem, 0.6vw + 0.1rem, 1.85rem);;
-}
-
-
-nav div img {
-    width: 5vw;
-    height: auto;
 }
 
 .profile {
@@ -139,6 +140,10 @@ section article button {
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
     padding: 0;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 section article button img {
