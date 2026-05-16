@@ -5,13 +5,16 @@
         <link rel="stylesheet" href="style.css">
         <title>Portfolio | CARDOT-CLEMENT Maxime</title>
     </head>
-    <body>
+    <body id="top">
         <nav>
-            <div> <!-- Tete et nom -->
-                <img src="assets/avatar_temp.png" alt="avatar">
+            <div id="me"> <!-- Tete et nom -->
+                <div id="avatar">
+                    <img src="assets/discord_pp.png" alt="avatar">
+                </div>
+                
                 <div class="profile">
-                    <h1>CARDOT-CLEMENT Maxime</h1>
-                    <h1>PORTFOLIO</h1>
+                    <a href="#top"><h1>CARDOT-CLEMENT Maxime</h1></a> 
+                    <a href="#top"><h1>PORTFOLIO</h1></a>
                 </div>
             </div>
             <div> <!-- PROJETS SCOLAIRES -->
@@ -48,8 +51,8 @@
                     </button>
                     
                     <div id="chat_btp_desc" class="project_description" onclick="hide()">
-                        <div id="desc_child">
-                            <h3>Chat BTP</h3>
+                        <div class="desc_child" id="chatbtp_desc_child">
+                            <h4>Chat BTP</h4>
                             <p>Nous avons développé un chatbot en Java en binome. Ce chatbot devait être spécialisé dans un certain domaine, nous l'avons spécialisé dans le BTP, d'où son nom. Nous lui avons ajouté une interface graphique.</p>
                             <p>L'utilisateur peut poser des questions au chatbot, si celui-ci ne connait pas la réponse, l'utilisateur peut la lui apprendre.</p>
                             <div>
@@ -70,8 +73,8 @@
                     </div>
                 </article>
                 <article id="une_autre_sae">
-                    <h3>Une autre SAE: S1.04</h3>
-                    <button onclick="display('une_autre_sae_desc')">
+                    <h3>S1.04 give a name</h3>
+                    <button onclick="display('s1_04')">
                         <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
                             <ul>
@@ -82,9 +85,9 @@
                             </ul>
                         </div>
                     </button>
-                    <div id="une_autre_sae_desc" class="project_description" onclick="hide('une_autre_sae_desc')">
-                        <div id="desc_child">
-                            <h3>S1.04</h3>
+                    <div id="s1_04" class="project_description" onclick="hide('s1_04')">
+                        <div class="desc_child" id="s1_04_desc_child">
+                            <h4>S1.04</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reprehenderit voluptates quia numquam, et error sapiente? Ab esse repellendus sequi aliquam, vel sapiente. Consequatur nulla numquam ab ullam atque nihil!</p>
                             <p></p>
                             <div>
@@ -118,15 +121,15 @@
                         </div>
                     </button>
                     <div id="youtoube_desc" class="project_description" onclick="hide('youtoube_desc')">
-                        <div id="desc_child">
-                            <h3>Youtoube</h3>
+                        <div class="desc_child" id="youtoube_desc_child">
+                            <h4>Youtoube</h4>
                             <p>En binome nous avons fait un clone de youtube avec Flask et une base de données SQL. Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.</p>
                             <p>Notre site est divisé en plusieurs pages: les pages d'accueil, tendances et recherche qui affiche une liste de vidéos,les pages liées à l'utilisateur, où il peut voir ses informations, ses vidéos, son historique et finalement la page d'affichage des vidéos qui permet de les lires, de les "aimer" et de poster un commentaire.</p>
                             <div>
                                 <article>
                                     <img src="assets/avatar_temp.png">
                                     <div>
-                                       <p>Desc</p>
+                                       <p>Il est possible de créer un compte et de s'y connecter. Une fois connecté, on peut accéder, poster ou modifier nos vidéos, accéder à notre historique, voir nos informations et changer le mot de passe. La connexion permet aussi l'ajout de commentaires sur une vidéo</p>
                                     </div> 
                                 </article>
                                 <article>
@@ -154,8 +157,8 @@
                         </div>
                     </button>
                     <div id="a_mazing_game_desc" class="project_description" onclick="hide('a_mazing_game_desc')">
-                        <div id="desc_child">
-                            <h3>A Mazing Game</h3>
+                        <div class="desc_child" id="a_mazing_game_desc_child">
+                            <h4>A Mazing Game</h4>
                             <p>Pour travailler avec des graphes j'ai créé un générateur de labyrinthes en python. J'ai du utiliser Pygame pour l'affichage et j'en ai profité pour transformer ce projet en véritable jeu vidéo.</p>
                             <p>Le joueur peut se déplacer dans le labyrinthe et doit trouver la sortie en fuyant les monstres qui le pourchassent et en évitant les pièges sur son chemin.</p>
                             <div>
@@ -197,7 +200,7 @@
                     </button>
                     <div id="bloodpit_desc" class="project_description" onclick="hide('bloodpit_desc')">
                         <div id="desc_child">
-                            <h3>BloodPit</h3>
+                            <h4>BloodPit</h4>
                             <p></p>
                             <p></p>
                             <div>
@@ -232,29 +235,29 @@
                         </div>
                     </button>
                     <div id="video_to_ascii_desc" class="project_description" onclick="hide('video_to_ascii_desc')">
-                        <div id="desc_child">
-                            <h3>Video To Ascii</h3>
-                            <p></p>
-                            <p></p>
+                        <div class="desc_child" id="video_to_ascii_desc_child">
+                            <h4>Video To Ascii</h4>
+                            <p>Video To Ascii est un projet personnel, son but est de transformer une vidéo en art ASCII c'est à dire en caractères.</p>
+                            <p>Chaque frame de l'image est transformée en blocs de 12x8 pixels et transformée en niveau de gris. Une frame blanche est crée et un caractère est assigné en fonction du niveau de gris. Cela permet de créer des dégradés selon le nombre de pixels noirs d'un caractère.</p>
                             <div>
                                 <article>
                                     <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/m2kdx9?" width="1280" style="border:none;"></iframe>
                                     <div>
-                                        <p>Une vidéo d'un ancien projet.</p>
+                                        <p>Voici un exemple: cette vidéo vient d'un ancien projet, elle va ête convertie en ASCII.</p>
                                     </div>
                                     
                                 </article>
                                 <article>
                                     <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/zl6ek7?" width="1280" style="border:none;"></iframe>
                                     <div>
-                                        <p>Le rendu après avoir exécuté Video To ASCII.</p>
+                                        <p>Et voici à quoi ressemble la même vidéo après conversion. Il manque uniquement le son.</p>
                                     </div>
                                     
                                 </article>
                                 <article>
                                     <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/l8ljyk?" width="1280" style="border:none;"></iframe>
                                     <div>
-                                        <p>La qualité d'image est meilleure lorsque la résolution de la vidéo d'entrée est plus évelvée et que la variation de lumière est plus grande.</p>
+                                        <p>Voici un autre exemple, la qualité d'image est meilleure lorsque la résolution de la vidéo d'entrée est plus élevée et que la variation de lumière est plus grande.</p>
                                     </div>
                                     
                                 </article>
@@ -277,8 +280,8 @@
                         </div>
                     </button>
                     <div id="mctdl_desc" class="project_description" onclick="hide('mctdl_desc')">
-                        <div id="desc_child">
-                            <h3>MCTdL</h3>
+                        <div class="desc_child" id="mctdl_desc_child">
+                            <h4>MCTdL</h4>
                             <p></p>
                             <p></p>
                             <div>

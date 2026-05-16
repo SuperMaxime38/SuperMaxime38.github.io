@@ -1,40 +1,80 @@
 :root {
-    --nav-bg: rgb(252, 255, 255);
-    --bg: rgb(255, 255, 255);
+    --nav-bg: rgb(235, 235, 235);
+    --bg: rgb(238, 245, 247);
+    --grad1: #95f4ff;
+    --gradMiddle: #ffffea;
+    --grad2: #fff6d8;
+    --article-bg: #383838;
 }
 
 body {
     background-color: var(--bg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav {
     display: flex;
     position: sticky;
     top: 8px;
-    border: 1px solid black;
     background-color: var(--nav-bg);
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    box-shadow: 0px 0px 10px 0px rgba(79, 109, 121, 0.75);
 }
 
 nav h1 {
-    font-size: clamp(1.5rem, 1.5vw + 0.1rem, 4rem);
+    font-size: clamp(1.5rem, 1.3vw + 0.1rem, 3.8rem);
 }
 
 nav div {
-    border: 1px solid black;
     display: flex;
     flex: 1;
     text-align: center;
 }
 
 nav div a {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     color: black;
 }
 
+#avatar {
+    overflow: hidden;
+    flex:0.3;
+    border-radius: 50%;
+}
+
+#avatar img {
+    width:100%;
+    height: 100%;
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+}
+
+h2 {
+    font-size: clamp(1.3rem, 1.15vw + 0.1rem, 3.6rem);
+}
+
+h3 {
+    font-size: clamp(1.1rem, 1.1vw + 0.1rem, 2.8rem);
+    margin-bottom: 0;
+
+    color: white;
+}
+
+h4 {
+    font-size: clamp(1.0rem, 1vw + 0.1rem, 2.6rem);
+}
+
+li {
+    font-size: clamp(0.9rem, 0.55vw + 0.1rem, 1.8rem);;
+}
+p {
+    font-size: clamp(0.95rem, 0.6vw + 0.1rem, 1.85rem);;
+}
 
 
 nav div img {
@@ -44,14 +84,12 @@ nav div img {
 
 .profile {
     flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .profile h1 {
     margin: 0;
-}
-
-h3 {
-    margin-bottom: 0;
 }
 
 .presentation {
@@ -83,15 +121,20 @@ section {
     text-align: center;
 }
 
-section article {
+section > article {
     margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
+
+    border-radius: 11px;
+    background-color: var(--article-bg);
+    box-shadow: 0px 10px 15px 0px rgba(144, 198, 219, 0.5);
 }
 
 section article button {
     display: flex;
-    border-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     border: none;
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
@@ -125,7 +168,7 @@ section article button div {
     align-items: center;
 }
 
-#desc_child {
+.desc_child {
     width: 80%;
     max-height: 80vh; /* Évite que le popup ne dépasse de l'écran en hauteur */
     background-color: white;
@@ -136,53 +179,63 @@ section article button div {
     /* Plus besoin de top: 50% ou transform ici grâce au Flexbox du parent */
 }
 
-#desc_child article {
+.desc_child article {
     display: flex;
     gap: 20px;
 }
 
-#desc_child img {
+.desc_child img {
     width: 25vw;
     height: auto;
 }
-#desc_child video {
+.desc_child video {
     width: 32vw;
     height: 16vw;
 }
 
-#desc_child iframe {
+.desc_child iframe {
     width: 32vw;
     height: 16vw;
+    flex:0.6;
 }
 
-#desc_child article div {
+.desc_child article div {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
 }
 
 #chat_btp button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 #une_autre_sae button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 #youtoube button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 #a_mazing_game button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 #bloodpit button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 #video_to_ascii button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 #mctdl button {
-    background: linear-gradient(0.48turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 
+
+@media screen and (max-width: 1400px) {
+
+    #me {
+        flex: 1.4;
+    }
+}
 
 @media screen and (max-width: 1120px){
     section article button {
@@ -197,5 +250,14 @@ section article button div {
     
     section article button div {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    nav {
+        flex-direction: column;
+        gap: 30px;
+        border-bottom-left-radius: 0;
     }
 }
