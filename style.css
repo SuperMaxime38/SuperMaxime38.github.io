@@ -2,9 +2,9 @@
     --nav-bg: rgb(240, 240, 240);
     --nav-bg-hover: rgb(255, 255, 255);
     --bg: rgb(238, 245, 247);
-    --grad1: #95f4ff;
-    --gradMiddle: #ffffea;
-    --grad2: #fff6d8;
+    --grad1: #aef7ff;
+    --gradMiddle: #eafffd;
+    --grad2: #d8f1ff;
     --article-bg: #383838;
 }
 
@@ -67,7 +67,7 @@ h2 {
 
 h3 {
     font-size: clamp(1.1rem, 1.1vw + 0.1rem, 2.8rem);
-    margin-bottom: 0;
+    margin: 5px;
 
     color: white;
 }
@@ -94,17 +94,23 @@ p {
 }
 
 .presentation {
-    text-align: center;
     /* border: 1px solid blue;*/
-    width: 95%;
+    width: fit-content;
     margin: 10px auto;
     /* add bg img */
 }
 
+.presentation ul {
+    width: fit-content;
+    padding: 15px;
+}
+
+.presentation li {
+    width: fit-content;
+}
+
 .presentation p {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    width: fit-content;
 }
 
 main {
@@ -119,17 +125,25 @@ section {
     margin-right: auto;
     /*border: 1px solid green;*/
 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    text-align: center;
+}
+
+.label {
+    width: 95%;
     text-align: center;
 }
 
 section > article {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     margin-left: auto;
     margin-right: auto;
 
     border-radius: 11px;
     background-color: var(--article-bg);
-    box-shadow: 0px 10px 15px 0px rgba(144, 198, 219, 0.5);
+    box-shadow: 0px 40px 15px 0px rgba(144, 198, 219, 0.5);
 }
 
 section article button {
@@ -137,7 +151,8 @@ section article button {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: none;
-    width: 100%;
+    width: 45vw;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0);
     padding: 0;
 }
@@ -153,8 +168,11 @@ section article button img {
 
 section article button div {
     width: 80%;
-    height: 80px;
     text-align: left;
+}
+
+section article button div p {
+    padding-left: 30px;
 }
 
 .project_description {
@@ -195,6 +213,13 @@ section article button div {
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
     margin: 10px;
 }
+
+.desc_child p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .desc_child video {
     width: 32vw;
     height: 16vw;
@@ -258,13 +283,21 @@ section article button div {
     section article button div {
         width: 100%;
     }
+
+    nav:nth-child(2) a{
+        padding: 40px;
+    } 
 }
 
 @media screen and (max-width: 960px) {
 
     nav {
         flex-direction: column;
-        gap: 30px;
+        gap: 0px;
         border-bottom-left-radius: 0;
+    }
+
+    nav a {
+        padding: 5px;
     }
 }

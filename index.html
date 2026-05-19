@@ -17,7 +17,6 @@
                         <h1>CARDOT-CLEMENT Maxime</h1>
                         <h1>PORTFOLIO</h1>
                     </a>
-                    
                 </div>
             </div>
             <div> <!-- PROJETS SCOLAIRES -->
@@ -32,23 +31,33 @@
                 <p>
                     Je suis un développeur full stack...
                     + mini presentation
-                    + contact
                 </p>
+                <p>Langages: Java, Java Swing, JavaFX, Javascript, Python, Flask, Pygame, PostgreSQL, SQLite</p>
+                <ul id="scolaire">
+                    <li>Adresse e-mail personnelle: </li>
+                    <li>Adresse e-mail académique: </li>
+                    <li>Github: </li>
+                    <li>Téléphone: </li>
+                </ul>
             </article>
+            <div class="label">
+                <hr>
+                <h2>PROJETS ACADÉMIQUES</h2>
+                <hr>
+            </div>
+            
             <section>
-                <hr>
-                <h2 id="scolaire">PROJETS ACADÉMIQUES</h2>
-                <hr>
                 <article id="chat_btp">
-                    <h3>Chat BTP</h3>
+                    <h3>Chat BTP (Chatbot)</h3>
                     <button onclick="display('chat_btp_desc')">
-                        <img src="assets/chat_btp.png" alt="image alt">
                         <div>
+                            <p>Description: Réalisation d'un chatbot spécialisé dans le BTP répondant à diverses questions des utilisateurs.</p>
                             <ul>
                                 <li>Technologies: Java, Java Swing</li>
                                 <li>Groupe: binôme</li>
-                                <li>Durée: 1 semaine</li>
+                                <li>Durée: 5 jours/homme</li>
                                 <li>Savoir-faire mobilisés: Mise en application des connaissances apprises en classe, travail en équipe.</li>
+                                <li>Participation: J'ai réalisé la majeure partie du chatbot et je me suis occupé seul de l'interface graphique.</li>
                             </ul>
                         </div>
                     </button>
@@ -56,8 +65,8 @@
                     <div id="chat_btp_desc" class="project_description" onclick="hide()">
                         <div class="desc_child" id="chatbtp_desc_child">
                             <h4>Chat BTP</h4>
-                            <p>Nous avons développé un chatbot en Java en binome. Ce chatbot devait être spécialisé dans un certain domaine, nous l'avons spécialisé dans le BTP, d'où son nom. Nous lui avons ajouté une interface graphique.</p>
-                            <p>L'utilisateur peut poser des questions au chatbot, si celui-ci ne connait pas la réponse, l'utilisateur peut la lui apprendre.</p>
+                            <p>Nous avons développé un chatbot en Java en binome. Ce chatbot devait être spécialisé dans un certain domaine, nous l'avons spécialisé dans le BTP, d'où son nom. Nous lui avons ajouté une interface graphique. 
+                            L'utilisateur peut poser des questions au chatbot, si celui-ci ne connait pas la réponse, l'utilisateur peut la lui apprendre.</p>
                             <div>
                                 <article>
                                     <img src="assets/chat_btp_question.png">
@@ -76,14 +85,14 @@
                     </div>
                 </article>
                 <article id="une_autre_sae">
-                    <h3>S1.04 give a name</h3>
+                    <h3>Création d'une base de données</h3>
                     <button onclick="display('s1_04')">
-                        <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
+                            <p>Description: Création et gestion d'une base de données pour une association de bateau à voile.</p>
                             <ul>
                                 <li>Technologies: PostgreSQL</li>
                                 <li>Groupe: binôme</li>
-                                <li>Durée: 1 mois</li>
+                                <li>Durée: 10h/homme</li>
                                 <li>Savoir-faire mobilisés: Travail en équipe, ponctualité, mise en application des connaissances apprises en classe</li>
                             </ul>
                         </div>
@@ -95,7 +104,7 @@
                             <p></p>
                             <div>
                                 <article>
-                                    <img src="assets/avatar_temp.png">
+                                    <img src="assets/s1_04.png">
                                     <div>
                                        <p>Desc</p>
                                     </div> 
@@ -111,15 +120,16 @@
                     </div>
                 </article>
                 <article id="youtoube">
-                    <h3>Youtoube</h3>
+                    <h3>Youtoube (Web app)</h3>
                     <button onclick="display('youtoube_desc')">
-                        <img src="assets/youtoube.png" alt="image alt">
                         <div>
+                            <p>Description: Création d'un clone de youtube, les utilisateurs peuvent poster et visionner des vidéos.</p>
                             <ul>
                                 <li>Technologies: Flask, SQLite</li>
                                 <li>Groupe: binôme</li>
-                                <li>Durée: 3 semaines</li>
+                                <li>Durée: 4j/homme</li>
                                 <li>Savoir-faire mobilisés: Être structuré, travail en équipe, apprendre à utiliser un nouvel outil.</li>
+                                <li>Participation: Je me suis occupé des utilisateurs et de la mise en ligne des vidéos.</li>
                             </ul>
                         </div>
                     </button>
@@ -148,14 +158,14 @@
                 </article>
 
                 <article id="a_mazing_game">
-                    <h3>A-Mazing-Game</h3>
+                    <h3 id="personnel">A-Mazing-Game (Jeu)</h3>
                     <button onclick="display('a_mazing_game_desc')">
-                        <img src="assets/a_mazing_game.png" alt="image alt">
                         <div>
+                            <p>Description: Développement d'un jeu de labyrinthe en 2D.</p>
                             <ul>
                                 <li>Technologies: Python, Pygame</li>
                                 <li>Groupe: seul</li>
-                                <li>Durée: 3 semaines</li>
+                                <li>Durée: 10j/homme</li>
                                 <li>Savoir-faire mobilisés: Mise en application des connaissances acquises en cours, autonomie, polyvalence, créativité.</li>
                             </ul>
                         </div>
@@ -183,11 +193,15 @@
                     </div>
                 </article>
             </section>
+            
+            <div class="label">
+                <hr>
+                <h2>PROJETS PERSONNELS</h2>
+                <hr>
+            </div>
+            
             <section>
 
-                <hr>
-                <h2 id="personnel">PROJETS PERSONNELS</h2>
-                <hr>
 
                 <!-- <article id="bloodpit">
                     <h3>Blood Pit</h3>
@@ -226,14 +240,14 @@
                 </article> -->
 
                 <article id="video_to_ascii">
-                    <h3>Video To ASCII</h3>
+                    <h3>Video To ASCII (Application)</h3>
                     <button onclick="display('video_to_ascii_desc')">
-                        <img src="assets/video_to_ascii.png" alt="image alt">
                         <div>
+                            <p>Description: Création d'une application de conversion de vidéo classiques en art ascii.</p>
                             <ul>
-                                <li>Technologies: C++, OpenCL</li>
+                                <li>Technologies: C++, .NET, OpenCL</li>
                                 <li>Groupe: seul</li>
-                                <li>Durée: 2 semaines</li>
+                                <li>Durée: 2j/homme</li>
                                 <li>Savoir-faire mobilisés: autonome, autodidacte...</li>
                             </ul>
                         </div>
@@ -271,14 +285,14 @@
                 </article>
 
                 <article id="mctdl">
-                    <h3>MCTdL</h3>
+                    <h3>MCTdL (Module)</h3>
                     <button onclick="display('mctdl_desc')">
-                        <img src="assets/avatar_temp.png" alt="image alt">
                         <div>
+                            <p>Description: Plugin spigot modifiant le comportement d'un serveur minecraft.</p>
                             <ul>
                                 <li>Technologies: Java, Spigot</li>
                                 <li>Groupe: seul</li>
-                                <li>Durée: 1 an</li>
+                                <li>Durée: 1mois/homme</li>
                                 <li>Savoir-faire mobilisés: Être structuré, prévoyant, patient, curieux, persévérant, créatif et autonome.</li>
                             </ul>
                         </div>
