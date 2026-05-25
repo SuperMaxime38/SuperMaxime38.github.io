@@ -132,8 +132,9 @@ section {
 }
 
 .label {
-    width: 95%;
+    width: 93%;
     text-align: center;
+    margin: 2rem auto;
 }
 
 section > article {
@@ -223,6 +224,8 @@ section article button div p {
 .desc_child video {
     width: 32vw;
     height: 16vw;
+    flex:0.6;
+    margin-bottom: 10px;
 }
 
 .desc_child iframe {

@@ -29,15 +29,12 @@
         <main>
             <article class="presentation">
                 <p>
-                    Je suis un développeur full stack...
-                    + mini presentation
+                    Je suis un étudiant en informatique souhaitant devenir un développeur full stack.
                 </p>
                 <p>Langages: Java, Java Swing, JavaFX, Javascript, Python, Flask, Pygame, PostgreSQL, SQLite</p>
                 <ul id="scolaire">
-                    <li>Adresse e-mail personnelle: </li>
-                    <li>Adresse e-mail académique: </li>
-                    <li>Github: </li>
-                    <li>Téléphone: </li>
+                    <li>Adresse e-mail académique: maxime.cardot-clement@etu.univ-grenoble-alpes.fr</li>
+                    <li>Github: https://github.com/SuperMaxime38/</li>
                 </ul>
             </article>
             <div class="label">
@@ -161,7 +158,7 @@
                     <h3 id="personnel">A-Mazing-Game (Jeu)</h3>
                     <button onclick="display('a_mazing_game_desc')">
                         <div>
-                            <p>Description: Développement d'un jeu de labyrinthe en 2D.</p>
+                            <p>Description: Développement d'un jeu de labyrinthe en 2D par parcours en profondeur de graphe.</p>
                             <ul>
                                 <li>Technologies: Python, Pygame</li>
                                 <li>Groupe: seul</li>
@@ -177,15 +174,26 @@
                             <p>Le joueur peut se déplacer dans le labyrinthe et doit trouver la sortie en fuyant les monstres qui le pourchassent et en évitant les pièges sur son chemin.</p>
                             <div>
                                 <article>
-                                    <img src="assets/avatar_temp.png">
+                                    <!-- <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/ok7zki?loop=0" width="1280" style="border:none;"></iframe> -->
+                                     <video controls src="assets/maze_gen.mp4"></video>
                                     <div>
-                                       <p>Desc</p>
+                                       <p>Dans un premier temps, un labyrinthe parfait est créé avec un parcours en profondeur aléatoire d'une grille. Quelques murs sont ensuite cassés aléatoirement.</p>
+                                       <p>Des ennemis, objets et pièges sont ensuite placés dans le labyrinthe.</p>
                                     </div> 
                                 </article>
                                 <article>
-                                    <img src="assets/avatar_temp.png">
+                                    <!-- <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/17ocod?loop=0" width="1280" style="border:none;"></iframe> -->
+                                     <video controls src="assets/maze_demo.mp4"></video>
                                     <div>
-                                       <p>Desc</p>
+                                       <p>Les pièges infligent des dégats aux joueurs et le font saigner. Lorsqu'il saigne, le joueur perd de la vie en continue proportionnellement au nombre de piège qu'il a traversé. Quand il est dans cet état, le joueur laisse des traces de sang sur le sol.</p>
+                                       <p>Des potions de soin régénèrent partiellement la vie et arrêtent le saignement.</p>
+                                       <p>La torche (1 par labyrinthe) permet d'éclairer temporairement une plus large zone du labyrinthe.</p>
+                                       <p>Le levier (1 par labyrinthe) permet de désactiver une certaine quantité de pièges.</p>
+                                       <p>Il y a deux sortes d'ennemis: les ennemis noirs et les ennemis rouges. Les ennemis noirs suivent continuellement le joueur à la vitesse d'une case par seconde. 
+                                        Les ennemis rouges, quand il n'y a pas de traces de sang dans le labyrinthe, suivent le joueur à la vitesse d'une case par seconde. Si du sang est présent, ils ne se déplacent que dans la trace à une vitesse proportionnelle à la quantité de sang. 
+                                        Les ennemis rouges peuvent quitter une trace de sang pour en rejoindre une plus proche du joueur. Si le joueur ne se trouve pas sur une trace de sang, les ennemis rouges èrent aléatoirement dedans.
+                                       </p>
+                                       <p>La partie se termine lorsque le joueur atteint la sortie ou meurt.</p>
                                     </div> 
                                 </article>
                             </div>
@@ -201,38 +209,31 @@
             </div>
             
             <section>
-
-
-                <!-- <article id="bloodpit">
-                    <h3>Blood Pit</h3>
-                    <button onclick="display('bloodpit_desc')">
-                        <img src="assets/avatar_temp.png" alt="image alt">
+                
+                <!-- <article id="random_search">
+                    <h3>Random Search (Application)</h3>
+                    <button onclick="display('random_search_desc')">
                         <div>
+                            <p>Description: Application type macro qui permet de faire des recherches aléatoires sur le navigateur Bing.</p>
                             <ul>
-                                <li>Technologies: Java, LibGDX</li>
+                                <li>Technologies: Java, Java Swing</li>
                                 <li>Groupe: seul</li>
-                                <li>Durée: projet en cours de développement</li>
-                                <li>Savoir-faire mobilisés: autonome, autodidacte...</li>
+                                <li>Durée: 5h/homme</li>
+                                <li>Savoir-faire mobilisés: Créativité</li>
                             </ul>
                         </div>
                     </button>
-                    <div id="bloodpit_desc" class="project_description" onclick="hide('bloodpit_desc')">
-                        <div id="desc_child">
-                            <h4>BloodPit</h4>
-                            <p></p>
+                    <div id="random_search_desc" class="project_description" onclick="hide('random_search_desc')">
+                        <div class="desc_child" id="random_search_desc_child">
+                            <h4>Random Search</h4>
                             <p></p>
                             <div>
                                 <article>
                                     <img src="assets/avatar_temp.png">
                                     <div>
-                                       <p>Desc</p>
-                                    </div> 
-                                </article>
-                                <article>
-                                    <img src="assets/avatar_temp.png">
-                                    <div>
-                                       <p>Desc</p>
-                                    </div> 
+                                        <p>DESC</p>
+                                    </div>
+                                    
                                 </article>
                             </div>
                         </div>
@@ -259,21 +260,21 @@
                             <p>Chaque frame de l'image est transformée en blocs de 12x8 pixels et transformée en niveau de gris. Une frame blanche est crée et un caractère est assigné en fonction du niveau de gris. Cela permet de créer des dégradés selon le nombre de pixels noirs d'un caractère.</p>
                             <div>
                                 <article>
-                                    <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/m2kdx9?" width="1280" style="border:none;"></iframe>
+                                    <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/m2kdx9?loop=0" width="1280" style="border:none;"></iframe>
                                     <div>
                                         <p>Voici un exemple: cette vidéo vient d'un ancien projet, elle va ête convertie en ASCII.</p>
                                     </div>
                                     
                                 </article>
                                 <article>
-                                    <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/zl6ek7?" width="1280" style="border:none;"></iframe>
+                                    <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/zl6ek7?loop=0" width="1280" style="border:none;"></iframe>
                                     <div>
                                         <p>Et voici à quoi ressemble la même vidéo après conversion. Il manque uniquement le son.</p>
                                     </div>
                                     
                                 </article>
                                 <article>
-                                    <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/l8ljyk?" width="1280" style="border:none;"></iframe>
+                                    <iframe allow="fullscreen" allowfullscreen height="720" src="https://streamable.com/e/l8ljyk?loop=0" width="1280" style="border:none;"></iframe>
                                     <div>
                                         <p>Voici un autre exemple, la qualité d'image est meilleure lorsque la résolution de la vidéo d'entrée est plus élevée et que la variation de lumière est plus grande.</p>
                                     </div>
@@ -288,7 +289,7 @@
                     <h3>MCTdL (Module)</h3>
                     <button onclick="display('mctdl_desc')">
                         <div>
-                            <p>Description: Plugin spigot modifiant le comportement d'un serveur minecraft.</p>
+                            <p>Description: Plugin spigot modifiant le comportement d'un serveur minecraft. Ce plugin ajoute plusieurs mini-jeux dans le jeu lui-même.</p>
                             <ul>
                                 <li>Technologies: Java, Spigot</li>
                                 <li>Groupe: seul</li>
@@ -300,17 +301,17 @@
                     <div id="mctdl_desc" class="project_description" onclick="hide('mctdl_desc')">
                         <div class="desc_child" id="mctdl_desc_child">
                             <h4>MCTdL</h4>
-                            <p></p>
-                            <p></p>
+                            <p>Le plugin MCTdL créer un tournoi de mini-jeux. Il gère les équipes, scores, objets modifiés entre autres.</p>
+                            <p>Le mode de jeu le plus aboutit est intitulé "Meltdown", les joueurs doivent obtenir le plus de score possible en récupérant des objets ou en éliminant les équipes adverses dans un environnement qui fond au fur et à mesure de la partie.</p>
                             <div>
                                 <article>
-                                    <img src="assets/avatar_temp.png">
+                                    <img src="assets/mctdl_map.png">
                                     <div>
                                        <p>Desc</p>
                                     </div> 
                                 </article>
                                 <article>
-                                    <img src="assets/avatar_temp.png">
+                                    <img src="assets/mctdl_demo.png">
                                     <div>
                                        <p>Desc</p>
                                     </div> 
