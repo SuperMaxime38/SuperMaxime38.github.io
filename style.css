@@ -242,25 +242,7 @@ section article button div p {
     text-align: left;
 }
 
-#chat_btp button {
-    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
-}
-#une_autre_sae button {
-    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
-}
-#youtoube button {
-    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
-}
-#a_mazing_game button {
-    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
-}
-#bloodpit button {
-    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
-}
-#video_to_ascii button {
-    background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
-}
-#mctdl button {
+button {
     background: linear-gradient(0.48turn, var(--grad1), var(--gradMiddle), var(--grad2));
 }
 
@@ -273,13 +255,8 @@ section article button div p {
 }
 
 @media screen and (max-width: 1120px){
-    section article button {
-        flex-direction: column;
-    }
-
-    section article button img {
-    width: 40vh;
-    height: auto;
+    section {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     

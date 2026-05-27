@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <title>Portfolio | CARDOT-CLEMENT Maxime</title>
+        <script src="helper.js" defer></script>
     </head>
     <body id="top">
         <nav>
@@ -29,12 +30,12 @@
         <main>
             <article class="presentation">
                 <p>
-                    Je suis un étudiant en informatique souhaitant devenir un développeur full stack.
+                    Je suis un étudiant en 1ère année de BUT Informatique souhaitant devenir un développeur full stack.
                 </p>
-                <p>Langages: Java, Java Swing, JavaFX, Javascript, Python, Flask, Pygame, PostgreSQL, SQLite</p>
+                <p>Langages: Java, Java Swing, JavaFX, Python, Flask, Pygame, Javascript, PostgreSQL, SQLite</p>
                 <ul id="scolaire">
-                    <li>Adresse e-mail académique: maxime.cardot-clement@etu.univ-grenoble-alpes.fr</li>
-                    <li>Github: https://github.com/SuperMaxime38/</li>
+                    <li>Adresse e-mail académique: cardotcm@etu.univ-grenoble-alpes.fr</li>
+                    <li>Github: <a href="https://github.com/SuperMaxime38/">https://github.com/SuperMaxime38/</a></li>
                 </ul>
             </article>
             <div class="label">
@@ -48,13 +49,13 @@
                     <h3>Chat BTP (Chatbot)</h3>
                     <button onclick="display('chat_btp_desc')">
                         <div>
-                            <p>Description: Réalisation d'un chatbot spécialisé dans le BTP répondant à diverses questions des utilisateurs.</p>
+                            <p><strong>Description:</strong> Réalisation d'un chatbot spécialisé dans le BTP.</p>
                             <ul>
-                                <li>Technologies: Java, Java Swing</li>
-                                <li>Groupe: binôme</li>
-                                <li>Durée: 5 jours/homme</li>
-                                <li>Savoir-faire mobilisés: Mise en application des connaissances apprises en classe, travail en équipe.</li>
-                                <li>Participation: J'ai réalisé la majeure partie du chatbot et je me suis occupé seul de l'interface graphique.</li>
+                                <li><strong>Technologies:</strong> Java, Java Swing</li>
+                                <li><strong>Groupe:</strong> binôme</li>
+                                <li><strong>Durée:</strong> 5 jours/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Mise en application des coursde programmation, travail en équipe.</li>
+                                <li><strong>Participation:</strong> J'ai réalisé la majeure partie du chatbot et je me suis occupé seul de l'interface graphique.</li>
                             </ul>
                         </div>
                     </button>
@@ -68,7 +69,7 @@
                                 <article>
                                     <img src="assets/chat_btp_question.png">
                                     <div>
-                                       <p>Lorsque le chatbot ne connait pas la reponse, l'utilisateur peut lui apprendre. Pour cela, il doit taper "Je vais te l'apprendre." Il suffit ensuite d'entrer la réponse pour que le chatbot la mémorise.</p>
+                                       <p>Lorsque le chatbot ne connait pas la réponse, l'utilisateur peut lui apprendre. Pour cela, il doit taper "Je vais te l'apprendre." Il suffit ensuite d'entrer la réponse pour que le chatbot la mémorise.</p>
                                     </div> 
                                 </article>
                                 <article>
@@ -82,34 +83,99 @@
                     </div>
                 </article>
                 <article id="une_autre_sae">
-                    <h3>Création d'une base de données</h3>
+                    <h3>Gestion d'une association de voile (BD)</h3>
                     <button onclick="display('s1_04')">
                         <div>
-                            <p>Description: Création et gestion d'une base de données pour une association de bateau à voile.</p>
+                            <p><strong>Description:</strong> Création et gestion d'une base de données pour une association de bateau à voile.</p>
                             <ul>
-                                <li>Technologies: PostgreSQL</li>
-                                <li>Groupe: binôme</li>
-                                <li>Durée: 10h/homme</li>
-                                <li>Savoir-faire mobilisés: Travail en équipe, ponctualité, mise en application des connaissances apprises en classe</li>
+                                <li><strong>Technologies:</strong> PostgreSQL</li>
+                                <li><strong>Groupe:</strong> binôme</li>
+                                <li><strong>Durée:</strong> 10h/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Travail en équipe, ponctualité, mise en application des cours de SQL</li>
                             </ul>
                         </div>
                     </button>
-                    <div id="s1_04" class="project_description" onclick="hide('s1_04')">
+                    <div id="s1_04" class="project_description" onclick="hide()">
                         <div class="desc_child" id="s1_04_desc_child">
                             <h4>S1.04</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reprehenderit voluptates quia numquam, et error sapiente? Ab esse repellendus sequi aliquam, vel sapiente. Consequatur nulla numquam ab ullam atque nihil!</p>
                             <p></p>
                             <div>
                                 <article>
                                     <img src="assets/s1_04.png">
                                     <div>
-                                       <p>Desc</p>
+                                       <p>SEA de la base de donnée de l'association.</p>
+                                    </div> 
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="vm">
+                    <h3>Installation d'une machine virtuelle (Linux)</h3>
+                    <button onclick="display('vm_desc')">
+                        <div>
+                            <p><strong>Description:</strong> Installation d'une machine virtuelle Debian 13 et mise en place d'un serveur Apache, PostgreSQL et phpPgAdmin.</p>
+                            <ul>
+                                <li><strong>Technologies: Linux</strong> </li>
+                                <li><strong>Groupe:</strong> seul</li>
+                                <li><strong>Durée:</strong> 1j/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Patient, Autonome, Méticuleux</li>
+                            </ul>
+                        </div>
+                    </button>
+                    
+                    <div id="vm_desc" class="project_description" onclick="hide()">
+                        <div class="desc_child" id="vm_desc_child">
+                            <h4>Installation d'une machine virtuelle avec serveur Apache</h4>
+                            <p>J'ai d'abord mis en place une machine virtuelle avec Qemu, j'ai ensuite installé et configurer PostgreSQL, Apache et phpPgAdmin avec apt et nano.</p>
+                            <div>
+                                <article>
+                                    <img src="assets/apache_default.webp">
+                                    <div>
+                                       <p></p>
+                                    </div> 
+                                </article>
+                                <article>
+                                    <img src="assets/phppgadmin.webp">
+                                    <div>
+                                       <p></p>
+                                    </div> 
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="r2-12">
+                    <h3>Thron Express (Web app)</h3>
+                    <button onclick="display('r2-12_desc')">
+                        <div>
+                            <p><strong>Description:</strong> En cours d'anglais, les élèves étaient à la fois clients et développeur, 
+                                j'ai développé un site qui permet d'accéder aux toilettes de particuliers contre un abonnement.</p>
+                            <ul>
+                                <li><strong>Technologies: Flask, SQLite, Javascript (Leaflet)</strong> </li>
+                                <li><strong>Groupe:</strong> 4</li>
+                                <li><strong>Durée:</strong> 4j/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Autonome, autodidacte</li>
+                                <li><strong>Participation: </strong> Partie technique & backend, structure HTML</li>
+                            </ul>
+                        </div>
+                    </button>
+                    
+                    <div id="r2-12_desc" class="project_description" onclick="hide()">
+                        <div class="desc_child" id="r2-12_desc_child">
+                            <h4>Site "Thron Express" développé avec Flask</h4>
+                            <p></p>
+                            <div>
+                                <article>
+                                    <img src="assets/avatar_temp.png">
+                                    <div>
+                                       <p></p>
                                     </div> 
                                 </article>
                                 <article>
                                     <img src="assets/avatar_temp.png">
                                     <div>
-                                       <p>Desc</p>
+                                       <p></p>
                                     </div> 
                                 </article>
                             </div>
@@ -120,17 +186,17 @@
                     <h3>Youtoube (Web app)</h3>
                     <button onclick="display('youtoube_desc')">
                         <div>
-                            <p>Description: Création d'un clone de youtube, les utilisateurs peuvent poster et visionner des vidéos.</p>
+                            <p><strong>Description:</strong> Création d'un clone de youtube, les utilisateurs peuvent poster et visionner des vidéos.</p>
                             <ul>
-                                <li>Technologies: Flask, SQLite</li>
-                                <li>Groupe: binôme</li>
-                                <li>Durée: 4j/homme</li>
-                                <li>Savoir-faire mobilisés: Être structuré, travail en équipe, apprendre à utiliser un nouvel outil.</li>
-                                <li>Participation: Je me suis occupé des utilisateurs et de la mise en ligne des vidéos.</li>
+                                <li><strong></strong>Technologies: Flask, SQLite</li>
+                                <li><strong>Groupe:</strong> binôme</li>
+                                <li><strong>Durée:</strong> 4j/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Être structuré, travail en équipe, apprendre à utiliser un nouvel outil.</li>
+                                <li><strong>Participation:</strong> Je me suis occupé des utilisateurs et de la mise en ligne des vidéos.</li>
                             </ul>
                         </div>
                     </button>
-                    <div id="youtoube_desc" class="project_description" onclick="hide('youtoube_desc')">
+                    <div id="youtoube_desc" class="project_description" onclick="hide()">
                         <div class="desc_child" id="youtoube_desc_child">
                             <h4>Youtoube</h4>
                             <p>En binome nous avons fait un clone de youtube avec Flask et une base de données SQL. Il s'agit du premier projet en groupe de NSI. Nous avons fait une copie assez simple du site youtube à l'aide de Flask.</p>
@@ -158,16 +224,16 @@
                     <h3 id="personnel">A-Mazing-Game (Jeu)</h3>
                     <button onclick="display('a_mazing_game_desc')">
                         <div>
-                            <p>Description: Développement d'un jeu de labyrinthe en 2D par parcours en profondeur de graphe.</p>
+                            <p><strong>Description:</strong> Développement d'un jeu de labyrinthe en 2D par parcours en profondeur de graphe.</p>
                             <ul>
-                                <li>Technologies: Python, Pygame</li>
-                                <li>Groupe: seul</li>
-                                <li>Durée: 10j/homme</li>
-                                <li>Savoir-faire mobilisés: Mise en application des connaissances acquises en cours, autonomie, polyvalence, créativité.</li>
+                                <li><strong>Technologies:</strong> Python, Pygame</li>
+                                <li><strong>Groupe:</strong> seul</li>
+                                <li><strong>Durée:</strong> 10j/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Mise en application des enseignements d'informatique, autonomie, polyvalence, créativité.</li>
                             </ul>
                         </div>
                     </button>
-                    <div id="a_mazing_game_desc" class="project_description" onclick="hide('a_mazing_game_desc')">
+                    <div id="a_mazing_game_desc" class="project_description" onclick="hide()">
                         <div class="desc_child" id="a_mazing_game_desc_child">
                             <h4>A Mazing Game</h4>
                             <p>Pour travailler avec des graphes j'ai créé un générateur de labyrinthes en python. J'ai du utiliser Pygame pour l'affichage et j'en ai profité pour transformer ce projet en véritable jeu vidéo.</p>
@@ -244,16 +310,16 @@
                     <h3>Video To ASCII (Application)</h3>
                     <button onclick="display('video_to_ascii_desc')">
                         <div>
-                            <p>Description: Création d'une application de conversion de vidéo classiques en art ascii.</p>
+                            <p><strong>Description:</strong> Création d'une application de conversion de vidéo classiques en art ascii.</p>
                             <ul>
-                                <li>Technologies: C++, .NET, OpenCL</li>
-                                <li>Groupe: seul</li>
-                                <li>Durée: 2j/homme</li>
-                                <li>Savoir-faire mobilisés: autonome, autodidacte...</li>
+                                <li><strong>Technologies:</strong> C++, .NET, OpenCL</li>
+                                <li><strong>Groupe:</strong> seul</li>
+                                <li><strong>Durée:</strong> 2j/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> autonome, autodidacte...</li>
                             </ul>
                         </div>
                     </button>
-                    <div id="video_to_ascii_desc" class="project_description" onclick="hide('video_to_ascii_desc')">
+                    <div id="video_to_ascii_desc" class="project_description" onclick="hide()">
                         <div class="desc_child" id="video_to_ascii_desc_child">
                             <h4>Video To Ascii</h4>
                             <p>Video To Ascii est un projet personnel, son but est de transformer une vidéo en art ASCII c'est à dire en caractères.</p>
@@ -289,16 +355,16 @@
                     <h3>MCTdL (Module)</h3>
                     <button onclick="display('mctdl_desc')">
                         <div>
-                            <p>Description: Plugin spigot modifiant le comportement d'un serveur minecraft. Ce plugin ajoute plusieurs mini-jeux dans le jeu lui-même.</p>
+                            <p><strong>Description:</strong> Plugin spigot modifiant le comportement d'un serveur minecraft. Ce plugin ajoute plusieurs mini-jeux dans le jeu lui-même.</p>
                             <ul>
-                                <li>Technologies: Java, Spigot</li>
-                                <li>Groupe: seul</li>
-                                <li>Durée: 1mois/homme</li>
-                                <li>Savoir-faire mobilisés: Être structuré, prévoyant, patient, curieux, persévérant, créatif et autonome.</li>
+                                <li><strong>Technologies:</strong> Java, Spigot</li>
+                                <li><strong>Groupe:</strong> seul</li>
+                                <li><strong>Durée:</strong> 1mois/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Être structuré, prévoyant, patient, curieux, persévérant, créatif et autonome.</li>
                             </ul>
                         </div>
                     </button>
-                    <div id="mctdl_desc" class="project_description" onclick="hide('mctdl_desc')">
+                    <div id="mctdl_desc" class="project_description" onclick="hide()">
                         <div class="desc_child" id="mctdl_desc_child">
                             <h4>MCTdL</h4>
                             <p>Le plugin MCTdL créer un tournoi de mini-jeux. Il gère les équipes, scores, objets modifiés entre autres.</p>
@@ -307,13 +373,18 @@
                                 <article>
                                     <img src="assets/mctdl_map.png">
                                     <div>
-                                       <p>Desc</p>
+                                       <p>L'environnement dans lequel évoluent les joueurs change au fil de la partie. Les salles s'ouvre peu à peu, permettant aux joueurs d'affronter les équipes adverses.</p>
+                                        <p>Plus le temps passe, plus l'environnement se détruit, de l'extérieur vers l'intérieur. L'image ci-contre montre l'environnement de dessus avant le début de la partie.</p>
                                     </div> 
                                 </article>
                                 <article>
                                     <img src="assets/mctdl_demo.png">
                                     <div>
-                                       <p>Desc</p>
+                                       <p>Les objets spéciaux et quelques éléments du décors ont été remodélisés et retexturés.</p>
+                                       <p>
+                                        Leurs comportements ont aussi été modifiés, par exemple, l'objet que tient le joueur permet de "congeler" et donc de mettre hors jeu un joueur ennemi. 
+                                        Un joueur éliminé aura le point de vue de ses coéquipiés jusqu'à ce qu'il soit libérer à l'aide du bloc bleu et rouge par terre ou que toute l'équipe soit éliminé.
+                                       </p>
                                     </div> 
                                     
                                 </article>
@@ -326,6 +397,5 @@
         <footer>
 
         </footer>
-        <script src="helper.js"></script>
     </body>
 </html>

@@ -1,27 +1,3 @@
-// function display(toDisplay) {
-//     let selection = document.getElementById(toDisplay);
-//     selection.style.display = "block";
-// }
-
-// var desc_child_clicked = false; // declare the variable that tracks the state
-// function desc_child_handler(){ // declare a function that updates the state
-//   desc_child_clicked = true;
-// }
-
-// var desc_child = document.getElementById('desc_child'); // grab a reference to your element
-// desc_child.addEventListener('click', desc_child_handler);
-
-// function hide(toHide) {
-//     let selection = document.getElementById(toHide);
-
-//     if(!desc_child_clicked){
-//         selection.style.display = "none";
-//     }
-    
-//     desc_child_clicked = false;
-// }
-
-
 var desc_child_clicked = false; // declare the variable that tracks the state
 function desc_child_handler(){ // declare a function that updates the state
   desc_child_clicked = true;
@@ -52,7 +28,6 @@ let isDescOpen = false;
 opened = "";
 
 function display(toDisplay) {
-    // Set the height of the popup to 800px
     document.getElementById(toDisplay).style.height = "100%";
     document.getElementById(toDisplay).style.display = "flex";
     isDescOpen = true;
@@ -63,7 +38,7 @@ function display(toDisplay) {
 
 function hide() {
     if(!desc_child_clicked){
-        // Set the height of the popup to 0
+        // Set the height of the popup to 0 (invisible)
         document.getElementById(opened).style.height = "0";
         document.getElementById(opened).style.display = "none";
         isDescOpen = false;
@@ -73,3 +48,10 @@ function hide() {
     }
   
 }
+
+// Escpace key close desc popup
+window.addEventListener("keydown", function (evt) {
+
+    if (isDescOpen && evt.keyCode == 27) hide();
+}
+);
