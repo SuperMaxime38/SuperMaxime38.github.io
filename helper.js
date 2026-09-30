@@ -9,6 +9,12 @@ chatbtp_desc_child.addEventListener('click', desc_child_handler);
 var s1_04_desc_child = document.getElementById('s1_04_desc_child');
 s1_04_desc_child.addEventListener('click', desc_child_handler);
 
+var vm_desc_child = document.getElementById('vm_desc_child');
+vm_desc_child.addEventListener('click', desc_child_handler);
+
+var r2_12_desc_child = document.getElementById('r2-12_desc_child');
+r2_12_desc_child.addEventListener('click', desc_child_handler);
+
 var youtoube_desc_child = document.getElementById('youtoube_desc_child');
 youtoube_desc_child.addEventListener('click', desc_child_handler);
 

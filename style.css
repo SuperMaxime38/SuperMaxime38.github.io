@@ -1,6 +1,6 @@
 :root {
-    --nav-bg: rgb(240, 240, 240);
-    --nav-bg-hover: rgb(255, 255, 255);
+    --nav-bg: rgb(0, 119, 200);
+    --nav-bg-hover: rgb(44, 140, 204);
     --bg: rgb(238, 245, 247);
     --grad1: #aef7ff;
     --gradMiddle: #eafffd;
@@ -40,7 +40,7 @@ nav div {
 
 nav div a {
     margin: auto;
-    color: black;
+    color: white;
     padding: 25px;
 }
 
@@ -73,14 +73,18 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(1.0rem, 1vw + 0.1rem, 2.6rem);
+    font-size: clamp(1.2rem, 1.5vw + 0.1rem, 2.6rem);
+    background-color: var(--article-bg);
+    padding: 0.95em 0px;
+    margin: 0;
+    color: white;
 }
 
 li {
-    font-size: clamp(0.9rem, 0.55vw + 0.1rem, 1.8rem);;
+    font-size: clamp(0.95rem, 0.60vw + 0.1rem, 1.8rem);;
 }
 p {
-    font-size: clamp(0.95rem, 0.6vw + 0.1rem, 1.85rem);;
+    font-size: clamp(1rem, 0.72vw + 0.1rem, 1.88rem);;
 }
 
 .profile {
@@ -131,20 +135,27 @@ section {
     text-align: center;
 }
 
+.project:hover {
+    
+    box-shadow: 0px 5px 8px 0px rgba(60, 60, 60, 1);
+}
+
 .label {
     width: 93%;
     text-align: center;
     margin: 2rem auto;
 }
 
-section > article {
+section > article { /* PROJECT */
     margin-bottom: 6rem;
     margin-left: auto;
     margin-right: auto;
 
     border-radius: 11px;
     background-color: var(--article-bg);
-    box-shadow: 0px 40px 15px 0px rgba(144, 198, 219, 0.5);
+    box-shadow: 0px 5px 8px 0px black;
+    display: flex;
+    flex-direction: column;
 }
 
 section article button {
@@ -198,7 +209,7 @@ section article button div p {
     background-color: white;
     border: 1px solid black;
     overflow-y: auto; /* Permet de scroller à l'intérieur du popup si le texte est long */
-    padding: 20px;
+    /* padding: 0px 20px 20px 20px; */
     border-radius: 10px;
     /* Plus besoin de top: 50% ou transform ici grâce au Flexbox du parent */
 }
@@ -212,8 +223,13 @@ section article button div p {
     width: 25vw;
     height: auto;
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
-    margin: 10px;
+    margin: 10px 10px 10px 30px;
 }
+
+/* .desc_child img:hover {
+    zoom: 1.1;
+    transition: ease-in 0.1s;
+} */
 
 .desc_child p {
     width: 80%;
@@ -298,5 +314,32 @@ button {
 
     nav a {
         padding: 5px;
+    }
+}
+
+@keyframes projectHoverAnimation {
+    0% {
+        box-shadow: 3px 3px 5px black;
+    }
+    12.5% {
+        box-shadow: 0px 3px 5px black;
+    }
+    25% {
+        box-shadow: -3px 3px 5px black;
+    }
+    37.5% {
+        box-shadow: -3px 0px 5px black;
+    }
+    50% {
+        box-shadow: -3px -3px 5px black;
+    }
+    62.5% {
+        box-shadow: 0px -3px 5px black;
+    }
+    75% {
+        box-shadow: 3px -3px 5px black;
+    }
+    87.5% {
+        box-shadow: 3px 0px 5px black;
     }
 }
