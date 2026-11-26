@@ -3,6 +3,9 @@ function desc_child_handler(){ // declare a function that updates the state
   desc_child_clicked = true;
 }
 
+var ampliio_desc_child = document.getElementById('ampliio_desc_child');
+ampliio_desc_child.addEventListener('click', desc_child_handler);
+
 var chatbtp_desc_child = document.getElementById('chatbtp_desc_child');
 chatbtp_desc_child.addEventListener('click', desc_child_handler);
 

@@ -336,7 +336,7 @@ button {
     }
 
     .desc_child iframe {
-        width: 90%;
+        width: 70%;
         height: 16vw;
         flex:0.6;
         margin-left: auto;
@@ -362,6 +362,10 @@ button {
     
     #avatar {
         display: none;
+    }
+    nav {
+        border-top-left-radius: 0;
+        width: 75%;
     }
 }
 
