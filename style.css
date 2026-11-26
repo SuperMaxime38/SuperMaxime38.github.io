@@ -28,6 +28,10 @@ nav {
     box-shadow: 0px 0px 2px 2px rgba(200, 247, 255, 0.5);
 }
 
+#me {
+        flex: 1.6;
+}
+
 nav h1 {
     font-size: clamp(1.5rem, 1.3vw + 0.1rem, 3.8rem);
 }
@@ -268,7 +272,7 @@ button {
 @media screen and (max-width: 1400px) {
 
     #me {
-        flex: 1.4;
+        flex: 1.6;
     }
 }
 
@@ -280,7 +284,9 @@ button {
 }
 
 @media screen and (max-width: 1120px){
-
+    #me {
+        flex: 2.5;
+    }
     section {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -304,6 +310,35 @@ button {
     nav div a {
         padding: 5px;
     }
+    
+    .desc_child article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desc_child img {
+        width: 90%;
+        height: auto;
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+        margin: 10px 10px 10px 30px;
+    }
+    .desc_child video {
+        width: 90%;
+        height: 16vw;
+        flex:0.6;
+        margin-bottom: 10px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .desc_child iframe {
+        width: 90%;
+        height: 16vw;
+        flex:0.6;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -312,10 +347,18 @@ button {
         flex-direction: column;
         gap: 0px;
         border-bottom-left-radius: 0;
+        border-top-left-radius: 80px;
     }
 
     nav a {
         padding: 5px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    
+    #avatar {
+        display: none;
     }
 }
 

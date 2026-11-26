@@ -34,6 +34,7 @@
                 </p>
                 <p>Diplomes: Baccalauréat général spécialités Mathématiques et Informatique</p>
                 <p>Langages: Java, Java Swing, JavaFX, C++, C, Python, Flask, Pygame, Javascript, PostgreSQL, SQLite, PHP</p>
+                <p>Technologies: VSCode, Eclipse, Git, IntelliJ, CLion, Krita</p>
                 <ul id="scolaire">
                     <li>Adresse e-mail académique: cardotcm@etu.univ-grenoble-alpes.fr</li>
                     <li>Github: <a href="https://github.com/SuperMaxime38/">https://github.com/SuperMaxime38/</a></li>
@@ -83,76 +84,6 @@
                         </div>
                     </div>
                 </article>
-                <article class="project" id="une_autre_sae">
-                    <h3>Gestion d'une association de voile (BD)</h3>
-                    <button onclick="display('s1_04')">
-                        <div>
-                            <p><strong>Description:</strong> Création et gestion d'une base de données pour une association de bateau à voile.</p>
-                            <ul>
-                                <li><strong>Technologies:</strong> PostgreSQL</li>
-                                <li><strong>Groupe:</strong> binôme</li>
-                                <li><strong>Durée:</strong> 10h/homme</li>
-                                <li><strong>Savoir-être mobilisés:</strong> Travail en équipe, ponctualité, mise en application des cours de SQL</li>
-                            </ul>
-                        </div>
-                    </button>
-                    <div id="s1_04" class="project_description" onclick="hide()">
-                        <div class="desc_child" id="s1_04_desc_child">
-                            <h4>Gestion d'une association de voile</h4>
-                            <p>
-                                L’association « Le Tourmentin » est une association qui organise des
-                                activités maritimes. Sa raison d'être est de favoriser des activités liées à la navigation de plaisance : sorties et
-                                rallyes de voiliers pouvant héberger de 5 à 9 personnes suivant leur taille.
-                                Le nombre de ses adhérents devenant d'année en année plus important, un budget a été alloué afin
-                                d'informatiser une partie de sa gestion.
-                                Les données nécessaires à la gestion du Tourmentin sont stockées dans une base de données que nous avons conçu et construit.
-                            </p>
-                            <div>
-                                <article>
-                                    <img src="assets/s1_04.png">
-                                    <div>
-                                       <p>SEA de la base de donnée de l'association.</p>
-                                    </div> 
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="project" id="vm">
-                    <h3>Installation d'une machine virtuelle (Linux)</h3>
-                    <button onclick="display('vm_desc')">
-                        <div>
-                            <p><strong>Description:</strong> Installation d'une machine virtuelle Debian 13 et mise en place d'un serveur Apache, PostgreSQL et phpPgAdmin.</p>
-                            <ul>
-                                <li><strong>Technologies: Linux</strong> </li>
-                                <li><strong>Groupe:</strong> seul</li>
-                                <li><strong>Durée:</strong> 1j/homme</li>
-                                <li><strong>Savoir-être mobilisés:</strong> Patient, Autonome, Méticuleux</li>
-                            </ul>
-                        </div>
-                    </button>
-                    
-                    <div id="vm_desc" class="project_description" onclick="hide()">
-                        <div class="desc_child" id="vm_desc_child">
-                            <h4>Installation d'une machine virtuelle avec serveur Apache</h4>
-                            <p>J'ai d'abord mis en place une machine virtuelle avec Qemu, j'ai ensuite installé et configurer PostgreSQL, Apache et phpPgAdmin avec apt et nano.</p>
-                            <div>
-                                <article>
-                                    <img src="assets/apache_default.webp">
-                                    <div>
-                                       <p>Une fois les services mis en place, on peut accéder à la page web en local.</p>
-                                    </div> 
-                                </article>
-                                <article>
-                                    <img src="assets/phppgadmin.webp">
-                                    <div>
-                                       <p>phpPgAdmin permet d'administrer la base de données...</p>
-                                    </div> 
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </article>
                 <article class="project" id="r2-12">
                     <h3>Thron Express (Web app)</h3>
                     <button onclick="display('r2-12_desc')">
@@ -195,6 +126,76 @@
                                     <div>
                                        <p>Un utilisateur peut ajouter une salle de bain à une adresse, celle ci est alors enregistrée dans une base de donnée SQLite.</p>
                                        <p>L'adresse est convertie en coordonnées afin de pouvoir placer un marqueur sur la carte.</p>
+                                    </div> 
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project" id="vm">
+                    <h3>Installation d'une machine virtuelle (Linux)</h3>
+                    <button onclick="display('vm_desc')">
+                        <div>
+                            <p><strong>Description:</strong> Installation d'une machine virtuelle Debian 13 et mise en place d'un serveur Apache, PostgreSQL et phpPgAdmin.</p>
+                            <ul>
+                                <li><strong>Technologies: Linux</strong> </li>
+                                <li><strong>Groupe:</strong> seul</li>
+                                <li><strong>Durée:</strong> 1j/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Patient, Autonome, Méticuleux</li>
+                            </ul>
+                        </div>
+                    </button>
+                    
+                    <div id="vm_desc" class="project_description" onclick="hide()">
+                        <div class="desc_child" id="vm_desc_child">
+                            <h4>Installation d'une machine virtuelle avec serveur Apache</h4>
+                            <p>J'ai d'abord mis en place une machine virtuelle avec Qemu, j'ai ensuite installé et configurer PostgreSQL, Apache et phpPgAdmin avec apt et nano.</p>
+                            <div>
+                                <article>
+                                    <img src="assets/apache_default.webp">
+                                    <div>
+                                       <p>Une fois les services mis en place, on peut accéder à la page web en local.</p>
+                                    </div> 
+                                </article>
+                                <article>
+                                    <img src="assets/phppgadmin.webp">
+                                    <div>
+                                       <p>phpPgAdmin permet d'administrer la base de données...</p>
+                                    </div> 
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project" id="une_autre_sae">
+                    <h3>Gestion d'une association de voile (BD)</h3>
+                    <button onclick="display('s1_04')">
+                        <div>
+                            <p><strong>Description:</strong> Création et gestion d'une base de données pour une association de bateau à voile.</p>
+                            <ul>
+                                <li><strong>Technologies:</strong> PostgreSQL</li>
+                                <li><strong>Groupe:</strong> binôme</li>
+                                <li><strong>Durée:</strong> 10h/homme</li>
+                                <li><strong>Savoir-être mobilisés:</strong> Travail en équipe, ponctualité, mise en application des cours de SQL</li>
+                            </ul>
+                        </div>
+                    </button>
+                    <div id="s1_04" class="project_description" onclick="hide()">
+                        <div class="desc_child" id="s1_04_desc_child">
+                            <h4>Gestion d'une association de voile</h4>
+                            <p>
+                                L’association « Le Tourmentin » est une association qui organise des
+                                activités maritimes. Sa raison d'être est de favoriser des activités liées à la navigation de plaisance : sorties et
+                                rallyes de voiliers pouvant héberger de 5 à 9 personnes suivant leur taille.
+                                Le nombre de ses adhérents devenant d'année en année plus important, un budget a été alloué afin
+                                d'informatiser une partie de sa gestion.
+                                Les données nécessaires à la gestion du Tourmentin sont stockées dans une base de données que nous avons conçu et construit.
+                            </p>
+                            <div>
+                                <article>
+                                    <img src="assets/s1_04.png">
+                                    <div>
+                                       <p>SEA de la base de donnée de l'association.</p>
                                     </div> 
                                 </article>
                             </div>
@@ -303,7 +304,7 @@
                                 <li><strong>Technologies:</strong> C++, .NET, OpenCL</li>
                                 <li><strong>Groupe:</strong> seul</li>
                                 <li><strong>Durée:</strong> 2j/homme</li>
-                                <li><strong>Savoir-être mobilisés:</strong> autonome, autodidacte...</li>
+                                <li><strong>Savoir-être mobilisés:</strong> autonome, autodidacte, résolution des problèmes</li>
                             </ul>
                         </div>
                     </button>
@@ -381,7 +382,7 @@
                     </div>
                 </article>
                 <article class="project" id="discord_bot">
-                    <h3>Bot Discord</h3>
+                    <h3>Bot Discord (Module)</h3>
                     <button onclick="display('discord_bot_desc')">
                         <div>
                             <p><strong>Description:</strong> Bot discord développé en NodeJS permettant de communiquer via discord avec une IA locale.</p>
