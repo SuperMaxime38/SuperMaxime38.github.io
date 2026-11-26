@@ -27,6 +27,9 @@ video_to_ascii_desc_child.addEventListener('click', desc_child_handler);
 var mctdl_desc_child = document.getElementById('mctdl_desc_child');
 mctdl_desc_child.addEventListener('click', desc_child_handler);
 
+var discord_bot_desc_child = document.getElementById('discord_bot_desc_child');
+discord_bot_desc_child.addEventListener('click', desc_child_handler);
+
 
 
 // LOGIN POPUP
